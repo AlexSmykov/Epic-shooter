@@ -1,0 +1,50 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &1
+MonoBehaviour:
+  m_ObjectHideFlags: 61
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ffe70aba2e7074048aca5de573b64a59, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  SimpleSelectedItems:
+    m_Keys:
+    - Assets/Animation/Door.controller
+    - Assets/Animation/DoorOpenidle.anim
+    - Assets/Animation/New Sprite.controller
+    - Assets/Prefabs/Alex's/Effects/Chests.meta
+    - Assets/Prefabs/Alex's/Effects/Chests/ChestSpawnPoint.prefab
+    - Assets/Prefabs/Alex's/Effects/Chests/ChestSpawnPoint.prefab.meta
+    - Assets/Prefabs/Alex's/Effects/Chests/ItemChest.prefab
+    - Assets/Prefabs/Alex's/Effects/Chests/ItemChest.prefab.meta
+    - Assets/Prefabs/Alex's/Effects/Chests/ResourcesChest.prefab
+    - Assets/Prefabs/Alex's/Effects/Chests/ResourcesChest.prefab.meta
+    - Assets/Prefabs/Alex's/Effects/Chests/WeaponChest.prefab
+    - Assets/Prefabs/Alex's/Effects/Chests/WeaponChest.prefab.meta
+    - Assets/Prefabs/Alex's/Player.prefab
+    - Assets/Prefabs/Alex's/RoomObjects/Door.prefab
+    - Assets/Prefabs/Alex's/Rooms/ChestRoom/ChestRoom 0.prefab
+    - Assets/Prefabs/Alex's/Rooms/DefaultRooms/DefaultRoom 0.prefab
+    - Assets/Prefabs/Alex's/Rooms/OtherRooms/StartRoom.prefab
+    - Assets/Scenes/Alex's scene.unity
+    - Assets/Scenes/SampleScene.unity
+    - Assets/Scenes/SampleScene.unity.meta
+    - Assets/Sprites/Alex's/Icons/HpBarBG.png
+    - Assets/Sprites/Rogue Lite Asset Pack/Tilemap/Door Anim/door anim_Animation
+      1_23.png.meta
+    - Packages/manifest.json
+    - Packages/packages-lock.json
+    - ProjectSettings/ProjectVersion.txt
+    - ProjectSettings/VersionControlSettings.asset
+    - 
+    m_Values: 000000000000000000000000000000000000000000000000000000
+  RevisionSummary: 
+  ChangesSearchValue: 
+  SelectedHistoryRevision: 
+  HistoryPageNumber: 0
+  TabIndex: 0
