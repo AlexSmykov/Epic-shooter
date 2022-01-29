@@ -144,8 +144,11 @@ public class Gun : MonoBehaviour
 
 		}
 
-		BulletText.text = CurrentClipSize + "/" + AllBullet;
-		UpdateReloadBar();
+		if(BulletText != null)
+		{
+			BulletText.text = CurrentClipSize + "/" + AllBullet;
+			UpdateReloadBar();
+		}
 	}
 
 	private void ReloadGun()

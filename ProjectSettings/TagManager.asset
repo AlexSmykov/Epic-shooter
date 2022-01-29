@@ -24,6 +24,7 @@ TagManager:
   - ItemInfo
   - Bang
   - CurrentFloor
+  - Canvas
   layers:
   - Default
   - TransparentFX
