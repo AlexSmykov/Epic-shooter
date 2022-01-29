@@ -79,8 +79,8 @@ public class Gun : MonoBehaviour
 		{
 			if (BulletsCount - ClipSize > 0)
 			{
-				BulletsCount -= ClipSize - CurrentClipSize;
-				CurrentClipSize = ClipSize;
+				BulletsCount -= ClipSize - CurrentClipSize + ClipSizeBonusLevel;
+				CurrentClipSize = ClipSize + ClipSizeBonusLevel;
 			}
 			else
 			{
@@ -91,7 +91,7 @@ public class Gun : MonoBehaviour
 			GiveBullet = false;
 		}
 
-		if ((CurrentClipSize <= 0  || (Input.GetButton("r") && CurrentClipSize != ClipSize)) && ClipRecoilTime <= 0 && BulletsCount > 0)
+		if ((CurrentClipSize <= 0  || (Input.GetButton("r") && CurrentClipSize != ClipSize + ClipSizeBonusLevel)) && ClipRecoilTime <= 0 && BulletsCount > 0)
         {
 			ReloadGun();
 		}

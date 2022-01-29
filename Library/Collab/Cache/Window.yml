@@ -14,35 +14,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   SimpleSelectedItems:
     m_Keys:
-    - Assets/Animation/Door.controller
-    - Assets/Animation/DoorOpenidle.anim
+    - Assets/Animation/CloseGame.anim
     - Assets/Animation/New Sprite.controller
-    - Assets/Prefabs/Alex's/Effects/Chests.meta
-    - Assets/Prefabs/Alex's/Effects/Chests/ChestSpawnPoint.prefab
-    - Assets/Prefabs/Alex's/Effects/Chests/ChestSpawnPoint.prefab.meta
-    - Assets/Prefabs/Alex's/Effects/Chests/ItemChest.prefab
-    - Assets/Prefabs/Alex's/Effects/Chests/ItemChest.prefab.meta
-    - Assets/Prefabs/Alex's/Effects/Chests/ResourcesChest.prefab
-    - Assets/Prefabs/Alex's/Effects/Chests/ResourcesChest.prefab.meta
-    - Assets/Prefabs/Alex's/Effects/Chests/WeaponChest.prefab
-    - Assets/Prefabs/Alex's/Effects/Chests/WeaponChest.prefab.meta
-    - Assets/Prefabs/Alex's/Player.prefab
-    - Assets/Prefabs/Alex's/RoomObjects/Door.prefab
-    - Assets/Prefabs/Alex's/Rooms/ChestRoom/ChestRoom 0.prefab
-    - Assets/Prefabs/Alex's/Rooms/DefaultRooms/DefaultRoom 0.prefab
-    - Assets/Prefabs/Alex's/Rooms/OtherRooms/StartRoom.prefab
-    - Assets/Scenes/Alex's scene.unity
-    - Assets/Scenes/SampleScene.unity
-    - Assets/Scenes/SampleScene.unity.meta
-    - Assets/Sprites/Alex's/Icons/HpBarBG.png
-    - Assets/Sprites/Rogue Lite Asset Pack/Tilemap/Door Anim/door anim_Animation
-      1_23.png.meta
-    - Packages/manifest.json
-    - Packages/packages-lock.json
-    - ProjectSettings/ProjectVersion.txt
-    - ProjectSettings/VersionControlSettings.asset
+    - Assets/Scripts/Alex's Script/Bullet/Bullet.cs
+    - Assets/Scripts/Alex's Script/Guns/Gun.cs
     - 
-    m_Values: 000000000000000000000000000000000000000000000000000000
+    m_Values: 0000000000
   RevisionSummary: 
   ChangesSearchValue: 
   SelectedHistoryRevision: 
