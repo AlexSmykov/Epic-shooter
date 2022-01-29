@@ -61,6 +61,7 @@
      <Compile Include="Assets\Scripts\Alex&apos;s Script\Other\FloatingDamage.cs" />
      <Compile Include="Assets\Scripts\Alex&apos;s Script\Bullet\Bullet.cs" />
      <Compile Include="Assets\Scripts\Alex&apos;s Script\Guns\WeaponGrab.cs" />
+     <Compile Include="Assets\Menu.cs" />
      <Compile Include="Assets\Scripts\Alex&apos;s Script\Guns\Gun.cs" />
      <Compile Include="Assets\Scripts\ClonePlayer.cs" />
      <Compile Include="Assets\Scripts\Alex&apos;s Script\Enemies\Enemy.cs" />
@@ -86,6 +87,7 @@
      <Compile Include="Assets\Scripts\Alex&apos;s Script\Items\Item.cs" />
      <Compile Include="Assets\Scripts\CameraShake.cs" />
      <Compile Include="Assets\Scripts\Alex&apos;s Script\Rooms\Room.cs" />
+     <Compile Include="Assets\StartGameScene.cs" />
      <Compile Include="Assets\Scripts\GunControl.cs" />
      <Compile Include="Assets\Scripts\PlayerMoving.cs" />
      <Compile Include="Assets\Scripts\Alex&apos;s Script\Player\HealthBar.cs" />

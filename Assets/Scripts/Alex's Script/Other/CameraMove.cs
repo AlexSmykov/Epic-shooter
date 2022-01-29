@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class CameraMove : MonoBehaviour
 {
@@ -33,5 +34,10 @@ public class CameraMove : MonoBehaviour
             Destroy(trash);
         }
         GameObject.FindGameObjectWithTag("FloorSpawner").GetComponent<FloorMaker>().Trash = new List<GameObject>();
+    }
+
+    public void CloseGame()
+    {
+        SceneManager.LoadScene("Main menu");
     }
 }

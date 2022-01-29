@@ -24,6 +24,8 @@ public class Player : MonoBehaviour
     public GameObject PlaceForGun;
     public GameObject UpEffect;
     public GameObject FloatingDamage;
+    public GameObject Canvas;
+    public GameObject Bg;
 
     public GameObject CoinText;
     public GameObject KeyText;
@@ -38,7 +40,6 @@ public class Player : MonoBehaviour
     {
         MaxHealth = PlayerPrefs.GetFloat("MaxHealth", MaxHealth);
         Health = PlayerPrefs.GetFloat("Health", MaxHealth);
-        GetComponent<HealthBar>().HealthBarUpdate(Health / MaxHealth);
         Coins = PlayerPrefs.GetInt("Coins", Coins);
         Keys = PlayerPrefs.GetInt("Keys", Keys);
         Materials = PlayerPrefs.GetInt("Materials", Materials);
@@ -46,6 +47,8 @@ public class Player : MonoBehaviour
         _Camera = Camera.main;
         _Rigidbody = GetComponent<Rigidbody2D>();
         _Animator = GetComponent<Animator>();
+        Canvas = GameObject.FindGameObjectWithTag("Canvas");
+        Bg = GameObject.FindGameObjectWithTag("BlackBG");
 
         CoinText = GameObject.FindGameObjectWithTag("CoinText");
         KeyText = GameObject.FindGameObjectWithTag("KeyText");
@@ -66,6 +69,23 @@ public class Player : MonoBehaviour
 
     public void Update()
     {
+        if (Input.GetKeyDown(KeyCode.F1))
+        {
+            if(Canvas.transform.localScale.z != 1)
+            {
+                Canvas.transform.localScale = new Vector3(0.1f, 0.1f, 1);
+            }
+            else
+            {
+                Canvas.transform.localScale = new Vector3(0, 0, 0);
+            }
+        }
+
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            Bg.GetComponent<Animator>().Play("CloseGame");
+        }
+
         _Direction.x = Input.GetAxisRaw("Horizontal");
         _Direction.y = Input.GetAxisRaw("Vertical");
 
@@ -84,13 +104,18 @@ public class Player : MonoBehaviour
         MaterialText.GetComponent<Text>().text = Materials.ToString();
     }
 
+    public void UpdateHealthText(float Health, float MaxHealth)
+    {
+        GetComponent<HealthBar>().HealthBarUpdate(Health / MaxHealth);
+    }
+
     public void HealthChange(float HealthValue)
     {
         Health += HealthValue;
         if (Health > MaxHealth) 
         { 
             Health = MaxHealth;}
-        GetComponent<HealthBar>().HealthBarUpdate(Health / MaxHealth);
+        UpdateHealthText(Health, MaxHealth);
         Vector2 DamagePosition = new Vector2(transform.position.x, transform.position.y + 1f);
         GameObject FloatDmg = Instantiate(FloatingDamage, DamagePosition, Quaternion.identity);
         FloatDmg.GetComponentInChildren<FloatingDamage>().Damage = HealthValue;

@@ -10,6 +10,7 @@ public class HealthBar : MonoBehaviour
     private void Start()
     {
         HPBar = GameObject.FindGameObjectWithTag("HpBarFill");
+        HealthBarUpdate(GetComponent<Player>().Health / GetComponent<Player>().MaxHealth);
     }
 
     public void HealthBarUpdate(float HealthAmount)
