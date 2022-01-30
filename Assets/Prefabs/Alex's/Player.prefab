@@ -16,6 +16,7 @@ GameObject:
   - component: {fileID: 2128983821727667990}
   - component: {fileID: 2128983821727667991}
   - component: {fileID: 2128983821727667997}
+  - component: {fileID: 1900373440646684963}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -160,7 +161,7 @@ MonoBehaviour:
   Keys: 0
   Materials: 0
   Speed: 5
-  ChestPickupCount: 5
+  ChestPickupCount: 7
   StartWeaponIndex: 0
   _Offset: -10
   PlaceForGun: {fileID: 2128983823507203290}
@@ -170,6 +171,7 @@ MonoBehaviour:
     type: 3}
   Canvas: {fileID: 0}
   Bg: {fileID: 0}
+  Cords: {x: 0, y: 0}
   CoinText: {fileID: 0}
   KeyText: {fileID: 0}
   MaterialText: {fileID: 0}
@@ -223,6 +225,20 @@ CircleCollider2D:
   m_Offset: {x: -0.0004912138, y: -0.058085658}
   serializedVersion: 2
   m_Radius: 0.041740514
+--- !u!114 &1900373440646684963
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2128983821727667988}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b5f4f163c257ba848b413c6809d91711, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Map: {fileID: 0}
+  FloorSpawner: {fileID: 0}
 --- !u!1 &2128983823507203290
 GameObject:
   m_ObjectHideFlags: 0

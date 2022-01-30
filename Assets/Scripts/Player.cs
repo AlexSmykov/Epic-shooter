@@ -26,6 +26,7 @@ public class Player : MonoBehaviour
     public GameObject FloatingDamage;
     public GameObject Canvas;
     public GameObject Bg;
+    public Vector2Int Cords;
 
     public GameObject CoinText;
     public GameObject KeyText;
@@ -38,6 +39,7 @@ public class Player : MonoBehaviour
 
     public void Start()
     {
+        Cords = new Vector2Int(12, 12);
         MaxHealth = PlayerPrefs.GetFloat("MaxHealth", MaxHealth);
         Health = PlayerPrefs.GetFloat("Health", MaxHealth);
         Coins = PlayerPrefs.GetInt("Coins", Coins);
@@ -83,6 +85,11 @@ public class Player : MonoBehaviour
             {
                 Canvas.transform.localScale = new Vector3(0, 0, 0);
             }
+        }
+
+        if (Input.GetKeyDown(KeyCode.LeftShift))
+        {
+            GetComponent<OpenMap>().TogleMap();
         }
 
         if (Input.GetKeyDown(KeyCode.Escape))

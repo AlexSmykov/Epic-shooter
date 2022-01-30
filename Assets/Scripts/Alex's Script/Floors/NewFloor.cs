@@ -18,13 +18,7 @@ public class NewFloor : MonoBehaviour
 
     private IEnumerator EndFloor(Collider2D collision)
     {
-        GameObject.FindGameObjectWithTag("FloorSpawner").GetComponent<FloorMaker>().Save();
-        collision.GetComponent<Player>().Save();
-        collision.GetComponentInChildren<WeaponSwitch>().Save();
-        foreach (Transform Weapon in GameObject.FindGameObjectWithTag("PlaceForGun").GetComponent<Transform>())
-        {
-            Weapon.GetComponent<Gun>().Save();
-        }
+        GameObject.FindGameObjectWithTag("FloorSpawner").GetComponent<Save>().SaveGame(collision);
         yield return new WaitForSeconds(1);
         SceneManager.LoadScene("Alex's scene");
         yield return new WaitForSeconds(2);
