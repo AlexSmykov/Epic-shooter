@@ -43,6 +43,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 309cc07c373601643b12703c29f498d3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Map: {fileID: 8601619954674697883, guid: a03861ddc00f280439ef97e9946e489c, type: 3}
   AllStartRooms: {fileID: 8308534896352501859, guid: 44e61364906538444a554aaff21bb7a7,
     type: 3}
   AllDefaultRooms: {fileID: 8308534896352501859, guid: e8c1c9ed95cf8f44db73810c6a1bd24d,

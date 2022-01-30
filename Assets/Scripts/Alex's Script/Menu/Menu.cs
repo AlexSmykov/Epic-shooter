@@ -12,6 +12,10 @@ public class Menu : MonoBehaviour
         PlayerPrefs.DeleteAll();
         Bg.GetComponent<Animator>().Play("MenuEnds");
     }
+    public void ContinueGame()
+    {
+        Bg.GetComponent<Animator>().Play("MenuEnds");
+    }
 
     public void TutorialOpen()
     {
@@ -22,11 +26,6 @@ public class Menu : MonoBehaviour
     {
         PlayerPrefs.DeleteAll();
         MenuObject.GetComponent<Animator>().Play("TutorialClose");
-    }
-
-    public void ContinueGame()
-    {
-        Bg.GetComponent<Animator>().Play("MenuEnds");
     }
 
     public void Exit()

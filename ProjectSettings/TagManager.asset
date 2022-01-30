@@ -25,6 +25,7 @@ TagManager:
   - Bang
   - CurrentFloor
   - Canvas
+  - Map
   layers:
   - Default
   - TransparentFX

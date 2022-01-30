@@ -50,7 +50,6 @@ public class Enemy : MonoBehaviour
             }
             Instantiate(DeadEffect, transform.position, Quaternion.identity);
             GameObject blood = Instantiate(BloodByDeath, transform.position, Quaternion.identity);
-            GameObject.FindGameObjectWithTag("FloorSpawner").GetComponent<FloorMaker>().Trash.Add(blood);
             Room.EnemiesLeft.Remove(gameObject);
             Destroy(gameObject);
         }
@@ -76,7 +75,6 @@ public class Enemy : MonoBehaviour
         FloatDmg.GetComponentInChildren<FloatingDamage>().Damage = Damage;
         Instantiate(BloodEffect, transform.position, Quaternion.identity);
         GameObject blood = Instantiate(BloodByShoot, transform.position, Quaternion.identity);
-        GameObject.FindGameObjectWithTag("FloorSpawner").GetComponent<FloorMaker>().Trash.Add(blood);
         if (IsBoss)
         {
             HpBarFill.GetComponent<Transform>().localScale = new Vector2(Health / StartHealth, 1);

@@ -7,6 +7,9 @@ using UnityEngine.UI;
 public class FloorMaker : MonoBehaviour
 {
     public bool[,] RoomsOnTheMap;
+    public bool[,] RoomsChecked;
+    public string[,] RoomTypeOnTheMap;
+    public GameObject Map;
     public GameObject[,] RoomsMap;
     public ArrayHolder AllStartRooms;
     public ArrayHolder AllDefaultRooms;
@@ -17,7 +20,6 @@ public class FloorMaker : MonoBehaviour
     public ArrayHolder AllSuperBossRooms;
     public GameObject Player;
     public GameObject Storage;
-    public List<GameObject> Trash;
 
     public int DefaultRoomCount;
     public int ShopRoomCount;
@@ -29,10 +31,15 @@ public class FloorMaker : MonoBehaviour
 
     private void Start()
     {
-        RoomsOnTheMap = new bool[50, 50];
-        RoomsMap = new GameObject[50, 50];
-        RoomsOnTheMap[25, 25] = true;
-        RoomsMap[25, 25] = Instantiate(AllStartRooms.Items[UnityEngine.Random.Range(0, AllStartRooms.Items.Length)], new Vector3(0, 0, 0), Quaternion.identity); 
+        Instantiate(Map, GameObject.FindGameObjectWithTag("MainCamera").transform.GetChild(0).transform);
+        RoomsOnTheMap = new bool[25, 25];
+        RoomsChecked = new bool[25, 25];
+        RoomTypeOnTheMap = new string[25, 25];
+        RoomsMap = new GameObject[25, 25];
+        RoomsOnTheMap[12, 12] = true;
+        RoomTypeOnTheMap[12, 12] = "Start";
+        RoomsChecked[12, 12] = true;
+        RoomsMap[12, 12] = Instantiate(AllStartRooms.Items[UnityEngine.Random.Range(0, AllStartRooms.Items.Length)], new Vector3(0, 0, 0), Quaternion.identity); 
         Instantiate(Player, new Vector3(0, 0, 0), Quaternion.identity);
         Instantiate(Storage, new Vector3(0, 0, 0), Quaternion.identity);
 
@@ -43,36 +50,36 @@ public class FloorMaker : MonoBehaviour
             DefaultRoomCount = UnityEngine.Random.Range(6 + CurrentFloor, 9 + CurrentFloor * 2);
             for (int i = 0; i < DefaultRoomCount; i++)
             {
-                PlaceOneRoomFromArray(AllDefaultRooms.Items);
+                PlaceOneRoomFromArray(AllDefaultRooms.Items, "Default");
             }
 
             ChestRoomCount = UnityEngine.Random.Range((int)(1 + CurrentFloor * 0.6), (int)(3 + CurrentFloor * 1.2));
             for (int i = 0; i < ChestRoomCount; i++)
             {
-                PlaceOneRoomFromArray(AllChestRooms.Items);
+                PlaceOneRoomFromArray(AllChestRooms.Items, "Chest");
             }
 
             ShopRoomCount = 1 + CurrentFloor / 3;
             for (int i = 0; i < ShopRoomCount; i++)
             {
-                PlaceOneRoomFromArray(AllShopRooms.Items);
+                PlaceOneRoomFromArray(AllShopRooms.Items, "Shop");
             }
 
             WorkshopRoomCount = 1 + CurrentFloor / 3;
             for (int i = 0; i < WorkshopRoomCount; i++)
             {
-                PlaceOneRoomFromArray(AllWorkshopRooms.Items);
+                PlaceOneRoomFromArray(AllWorkshopRooms.Items, "Workshop");
             }
 
             BossRoomCount = (int)(1 + CurrentFloor / 1.7);
             for (int i = 0; i < BossRoomCount; i++)
             {
-                PlaceOneRoomFromArray(AllBossRooms.Items);
+                PlaceOneRoomFromArray(AllBossRooms.Items, "Boss");
             }
         }
         else
         {
-            PlaceOneRoomFromArray(AllSuperBossRooms.Items);
+            PlaceOneRoomFromArray(AllSuperBossRooms.Items, "SuperBoss");
         }
 
         PlaceDoors();
@@ -84,10 +91,9 @@ public class FloorMaker : MonoBehaviour
         PlayerPrefs.SetInt("CurrentFloor", CurrentFloor);
     }
 
-    private void PlaceOneRoomFromArray(GameObject[] PossibleRooms)
+    private void PlaceOneRoomFromArray(GameObject[] PossibleRooms, string type)
     {
         Vector2Int NewRoom = VacantPlacesFind();
-
         bool NeedDoorUp = false;
         bool NeedDoorDown = false;
         bool NeedDoorLeft = false;
@@ -119,8 +125,9 @@ public class FloorMaker : MonoBehaviour
                 !(NeedDoorLeft && !NewRandomRoom.GetComponent<Room>().PossibleDoorLeft) &&
                 !(NeedDoorRight && !NewRandomRoom.GetComponent<Room>().PossibleDoorRight))
             {
-                RoomsMap[NewRoom.x, NewRoom.y] = Instantiate(NewRandomRoom, new Vector3((NewRoom.x - 25) * 24, (NewRoom.y - 25) * 14, 0), Quaternion.identity);
+                RoomsMap[NewRoom.x, NewRoom.y] = Instantiate(NewRandomRoom, new Vector3((NewRoom.x - 12) * 24, (NewRoom.y - 12) * 14, 0), Quaternion.identity);
                 RoomsOnTheMap[NewRoom.x, NewRoom.y] = true;
+                RoomTypeOnTheMap[NewRoom.x, NewRoom.y] = type;
                 break;
             }
 
