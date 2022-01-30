@@ -221,7 +221,7 @@ public class ItemEffects : MonoBehaviour
     }
     private void Effect_31(Collider2D collision)
     {
-        WeaponMultiShotUp(collision, 1, 1);
+        WeaponMultiShotUp(collision, 3, 1);
     }
     private void Effect_32(Collider2D collision)
     {

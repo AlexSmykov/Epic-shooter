@@ -44,6 +44,11 @@ public class Gun : MonoBehaviour
     {
 		BulletText = GameObject.Find("WeaponBulletText").GetComponent<Text>();
 		ReloadBar = GameObject.FindGameObjectWithTag("ReloadBar");
+		BulletTextUpdate();
+	}
+
+	public void Load()
+	{
 		CurrentClipSize = PlayerPrefs.GetInt(GunName + "CurrentClipSize", ClipSize);
 		BulletsCount = PlayerPrefs.GetInt(GunName + "BulletsCount", BulletsCount);
 		ClipSizeBonusLevel = PlayerPrefs.GetInt(GunName + "ClipSizeBonusLevel", ClipSizeBonusLevel);
@@ -53,7 +58,6 @@ public class Gun : MonoBehaviour
 		FireRateBonusLevel = PlayerPrefs.GetFloat(GunName + "FireRateBonusLevel", FireRateBonusLevel);
 		BulletSpeedBonusLevel = PlayerPrefs.GetFloat(GunName + "BulletSpeedBonusLevel", BulletSpeedBonusLevel);
 		ClipRecoilBonusLevel = PlayerPrefs.GetFloat(GunName + "ClipRecoilBonusLevel", ClipRecoilBonusLevel);
-		BulletTextUpdate();
 	}
 
 	public void Save()
@@ -159,6 +163,6 @@ public class Gun : MonoBehaviour
 
     public void UpdateReloadBar()
 	{
-		ReloadBar.GetComponent<Image>().fillAmount = (float)CurrentClipSize / (float)ClipSize;
+		ReloadBar.GetComponent<Image>().fillAmount = (float)CurrentClipSize / (float)(ClipSize + ClipSizeBonusLevel - 1);
 	}
 }

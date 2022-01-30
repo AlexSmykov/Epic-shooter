@@ -56,6 +56,10 @@ public class Player : MonoBehaviour
         UpdateResourcesText();
 
         Storage = GameObject.FindGameObjectWithTag("Storage").GetComponent<ObjectStorage>();
+        foreach (Gun gun in PlayerGuns)
+        {
+            gun.Load();
+        }
     }
 
     public void Save()

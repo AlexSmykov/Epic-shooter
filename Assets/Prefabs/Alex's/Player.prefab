@@ -154,8 +154,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6c580c723e5eb29469135bfbd0300f25, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MaxHealth: 100
-  Health: 100
+  MaxHealth: 150
+  Health: 0
   Coins: 0
   Keys: 0
   Materials: 0
@@ -168,6 +168,8 @@ MonoBehaviour:
     type: 3}
   FloatingDamage: {fileID: 2191169466657189297, guid: cbf768e72f6e79449a48025e30fe7af5,
     type: 3}
+  Canvas: {fileID: 0}
+  Bg: {fileID: 0}
   CoinText: {fileID: 0}
   KeyText: {fileID: 0}
   MaterialText: {fileID: 0}
@@ -299,7 +301,7 @@ PrefabInstance:
     - target: {fileID: 8266216276020101544, guid: d9f41d2d32b807c469722cebfb495f4f,
         type: 3}
       propertyPath: BulletsCount
-      value: 40
+      value: 25
       objectReference: {fileID: 0}
     - target: {fileID: 8266216276020101546, guid: d9f41d2d32b807c469722cebfb495f4f,
         type: 3}
@@ -401,7 +403,7 @@ PrefabInstance:
     - target: {fileID: 8266216276020101544, guid: 293d4cdcb395a474d9fc0e91824684ef,
         type: 3}
       propertyPath: BulletsCount
-      value: 80
+      value: 50
       objectReference: {fileID: 0}
     - target: {fileID: 8266216276020101546, guid: 293d4cdcb395a474d9fc0e91824684ef,
         type: 3}
@@ -503,7 +505,7 @@ PrefabInstance:
     - target: {fileID: 8266216276020101544, guid: ad3cf4f7a4c04e2498703a67b72ab587,
         type: 3}
       propertyPath: BulletsCount
-      value: 400
+      value: 250
       objectReference: {fileID: 0}
     - target: {fileID: 8266216276020101546, guid: ad3cf4f7a4c04e2498703a67b72ab587,
         type: 3}
@@ -601,6 +603,11 @@ PrefabInstance:
         type: 3}
       propertyPath: GunName
       value: Machinegun
+      objectReference: {fileID: 0}
+    - target: {fileID: 8266216276020101544, guid: ebba2dc2ab278a24f90e3724cbf1cb0e,
+        type: 3}
+      propertyPath: BulletsCount
+      value: 400
       objectReference: {fileID: 0}
     - target: {fileID: 8266216276020101546, guid: ebba2dc2ab278a24f90e3724cbf1cb0e,
         type: 3}
@@ -712,7 +719,7 @@ PrefabInstance:
     - target: {fileID: 8266216276020101544, guid: 5d3938a2d1879714eb6376e2d124c1e2,
         type: 3}
       propertyPath: BulletsCount
-      value: 300
+      value: 450
       objectReference: {fileID: 0}
     - target: {fileID: 8266216276020101546, guid: 5d3938a2d1879714eb6376e2d124c1e2,
         type: 3}
@@ -814,7 +821,7 @@ PrefabInstance:
     - target: {fileID: 8266216276020101544, guid: c90a2e2d1e12ace49810c5f161cb4c4f,
         type: 3}
       propertyPath: BulletsCount
-      value: 175
+      value: 100
       objectReference: {fileID: 0}
     - target: {fileID: 8266216276020101546, guid: c90a2e2d1e12ace49810c5f161cb4c4f,
         type: 3}

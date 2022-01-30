@@ -299,7 +299,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3aea32aff0392f84e959cacf62b6fba9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Speed: 0.14
+  Speed: 0.16
   AnimationSpeed: 1.1
   IsJumping: 0
   JumpEffect: {fileID: 2260435715245688863, guid: 2500a7e6b487d9f40af4d55e8e5fc534,

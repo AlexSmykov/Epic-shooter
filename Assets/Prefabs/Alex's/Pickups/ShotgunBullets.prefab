@@ -115,7 +115,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   PickupIndex: 7
-  PickupCount: 35
+  PickupCount: 20
   PickupEffect: {fileID: 7698488682441119929, guid: c6dea7b37a392ee439f9b184c5533f4f,
     type: 3}
   PlaceForGun: {fileID: 0}
