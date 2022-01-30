@@ -11,4 +11,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Alex's scene.unity
     guid: ce431fa47fd70f842ad79fae1fce9b55
+  - enabled: 1
+    path: Assets/Scenes/Congratulations.unity
+    guid: fff25c077d81bbf47a5f9e69cfc2ecb2
   m_configObjects: {}

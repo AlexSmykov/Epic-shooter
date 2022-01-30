@@ -40,4 +40,9 @@ public class CameraMove : MonoBehaviour
     {
         SceneManager.LoadScene("Main menu");
     }
+
+    public void CompleteGame()
+    {
+        SceneManager.LoadScene("Congratulations");
+    }
 }

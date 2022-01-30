@@ -64,7 +64,7 @@ public class Bullet : MonoBehaviour
                     {
 						GameObject bang = Instantiate(Bang, transform.position, Quaternion.identity);
 						bang.GetComponent<Bang>().BangRadius = BangRadius;
-						bang.GetComponent<Bang>().Damage = Damage;
+						bang.GetComponent<Bang>().Damage = -Damage;
 					}
 
 					Destroy(gameObject);

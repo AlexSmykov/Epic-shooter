@@ -44,29 +44,29 @@ public class Gun : MonoBehaviour
     {
 		BulletText = GameObject.Find("WeaponBulletText").GetComponent<Text>();
 		ReloadBar = GameObject.FindGameObjectWithTag("ReloadBar");
-		CurrentClipSize = PlayerPrefs.GetInt(GunName.ToString() + "CurrentClipSize", ClipSize);
-		BulletsCount = PlayerPrefs.GetInt(GunName.ToString() + "BulletsCount", BulletsCount);
-		ClipSizeBonusLevel = PlayerPrefs.GetInt(GunName.ToString() + "ClipSizeBonusLevel", ClipSizeBonusLevel);
-		MultiShotBonusLevel = PlayerPrefs.GetInt(GunName.ToString() + "MultiShotBonusLevel", MultiShotBonusLevel);
-		PenetrationBonusLevel = PlayerPrefs.GetInt(GunName.ToString() + "PenetrationBonusLevel", PenetrationBonusLevel);
-		DamageBonusLevel = PlayerPrefs.GetFloat(GunName.ToString() + "DamageBonusLevel", DamageBonusLevel);
-		FireRateBonusLevel = PlayerPrefs.GetFloat(GunName.ToString() + "FireRateBonusLevel", FireRateBonusLevel);
-		BulletSpeedBonusLevel = PlayerPrefs.GetFloat(GunName.ToString() + "BulletSpeedBonusLevel", BulletSpeedBonusLevel);
-		ClipRecoilBonusLevel = PlayerPrefs.GetFloat(GunName.ToString() + "ClipRecoilBonusLevel", ClipRecoilBonusLevel);
+		CurrentClipSize = PlayerPrefs.GetInt(GunName + "CurrentClipSize", ClipSize);
+		BulletsCount = PlayerPrefs.GetInt(GunName + "BulletsCount", BulletsCount);
+		ClipSizeBonusLevel = PlayerPrefs.GetInt(GunName + "ClipSizeBonusLevel", ClipSizeBonusLevel);
+		MultiShotBonusLevel = PlayerPrefs.GetInt(GunName + "MultiShotBonusLevel", MultiShotBonusLevel);
+		PenetrationBonusLevel = PlayerPrefs.GetInt(GunName + "PenetrationBonusLevel", PenetrationBonusLevel);
+		DamageBonusLevel = PlayerPrefs.GetFloat(GunName + "DamageBonusLevel", DamageBonusLevel);
+		FireRateBonusLevel = PlayerPrefs.GetFloat(GunName + "FireRateBonusLevel", FireRateBonusLevel);
+		BulletSpeedBonusLevel = PlayerPrefs.GetFloat(GunName + "BulletSpeedBonusLevel", BulletSpeedBonusLevel);
+		ClipRecoilBonusLevel = PlayerPrefs.GetFloat(GunName + "ClipRecoilBonusLevel", ClipRecoilBonusLevel);
 		BulletTextUpdate();
 	}
 
 	public void Save()
     {
-		PlayerPrefs.SetInt(GunName.ToString() + "CurrentClipSize", CurrentClipSize);
-		PlayerPrefs.SetInt(GunName.ToString() + "BulletsCount", BulletsCount);
-		PlayerPrefs.SetInt(GunName.ToString() + "ClipSizeBonusLevel", ClipSizeBonusLevel);
-		PlayerPrefs.SetInt(GunName.ToString() + "MultiShotBonusLevel", MultiShotBonusLevel);
-		PlayerPrefs.SetInt(GunName.ToString() + "PenetrationBonusLevel", PenetrationBonusLevel);
-		PlayerPrefs.SetFloat(GunName.ToString() + "DamageBonusLevel", DamageBonusLevel);
-		PlayerPrefs.SetFloat(GunName.ToString() + "FireRateBonusLevel", FireRateBonusLevel);
-		PlayerPrefs.SetFloat(GunName.ToString() + "BulletSpeedBonusLevel", BulletSpeedBonusLevel);
-		PlayerPrefs.SetFloat(GunName.ToString() + "ClipRecoilBonusLevel", ClipRecoilBonusLevel);
+		PlayerPrefs.SetInt(GunName + "CurrentClipSize", CurrentClipSize);
+		PlayerPrefs.SetInt(GunName + "BulletsCount", BulletsCount);
+		PlayerPrefs.SetInt(GunName + "ClipSizeBonusLevel", ClipSizeBonusLevel);
+		PlayerPrefs.SetInt(GunName + "MultiShotBonusLevel", MultiShotBonusLevel);
+		PlayerPrefs.SetInt(GunName + "PenetrationBonusLevel", PenetrationBonusLevel);
+		PlayerPrefs.SetFloat(GunName + "DamageBonusLevel", DamageBonusLevel);
+		PlayerPrefs.SetFloat(GunName + "FireRateBonusLevel", FireRateBonusLevel);
+		PlayerPrefs.SetFloat(GunName + "BulletSpeedBonusLevel", BulletSpeedBonusLevel);
+		PlayerPrefs.SetFloat(GunName + "ClipRecoilBonusLevel", ClipRecoilBonusLevel);
 	}
 
     void Update()
@@ -79,8 +79,8 @@ public class Gun : MonoBehaviour
 		{
 			if (BulletsCount - ClipSize > 0)
 			{
-				BulletsCount -= ClipSize - CurrentClipSize;
-				CurrentClipSize = ClipSize;
+				BulletsCount -= ClipSize - CurrentClipSize + ClipSizeBonusLevel - 1;
+				CurrentClipSize = ClipSize + ClipSizeBonusLevel - 1;
 			}
 			else
 			{
@@ -91,7 +91,7 @@ public class Gun : MonoBehaviour
 			GiveBullet = false;
 		}
 
-		if ((CurrentClipSize <= 0  || (Input.GetButton("r") && CurrentClipSize != ClipSize)) && ClipRecoilTime <= 0 && BulletsCount > 0)
+		if ((CurrentClipSize <= 0  || (Input.GetButton("r") && CurrentClipSize != ClipSize + ClipSizeBonusLevel - 1)) && ClipRecoilTime <= 0 && BulletsCount > 0)
         {
 			ReloadGun();
 		}
@@ -144,7 +144,7 @@ public class Gun : MonoBehaviour
 
 		}
 
-		if(BulletText != null)
+		if(gameObject.activeSelf)
 		{
 			BulletText.text = CurrentClipSize + "/" + AllBullet;
 			UpdateReloadBar();

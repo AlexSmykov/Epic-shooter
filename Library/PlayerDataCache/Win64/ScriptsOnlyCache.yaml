@@ -9,6 +9,7 @@ ScriptsOnlyBuild:
     - CameraMove
     - ChangeRoom
     - Chest
+    - CongatulationMenu
     - DoorSpriteChanger
     - Enemy
     - FlipSpriteByTarget
@@ -19,6 +20,7 @@ ScriptsOnlyBuild:
     - Item
     - ItemEffects
     - ItemInfo
+    - Menu
     - MoveToTarget
     - NewFloor
     - ObjectStorage
@@ -32,6 +34,7 @@ ScriptsOnlyBuild:
     - SlimeJumpMove
     - SpawnChest
     - SpawnEnemiesAbility
+    - StartGameScene
     - WeaponGrab
     - WeaponSwitch
     - WorkshopItemSpawn
@@ -55,6 +58,7 @@ ScriptsOnlyBuild:
     UnityEditor.Graphs.dll:
     - UnityEditor.Graphs.AnimationBlendTree.Graph
     - UnityEditor.Graphs.AnimationBlendTree.GraphGUI
+    - UnityEditor.Graphs.AnimationStateMachine.AnimatorStateTransitionInspector
     - UnityEditor.Graphs.AnimationStateMachine.AnyStateNode
     - UnityEditor.Graphs.AnimationStateMachine.Graph
     - UnityEditor.Graphs.AnimationStateMachine.GraphGUI
@@ -67,9 +71,11 @@ ScriptsOnlyBuild:
     UnityEngine.UI.dll:
     - UnityEngine.EventSystems.EventSystem
     - UnityEngine.EventSystems.StandaloneInputModule
+    - UnityEngine.UI.Button
     - UnityEngine.UI.CanvasScaler
     - UnityEngine.UI.GraphicRaycaster
     - UnityEngine.UI.Image
+    - UnityEngine.UI.Shadow
     - UnityEngine.UI.Text
   sceneClasses:
     Assets/Scenes/Alex's scene.unity:
@@ -112,47 +118,47 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 1452}
     - Class: 114
-      Script: {instanceID: 1460}
+      Script: {instanceID: 1456}
     - Class: 114
-      Script: {instanceID: 1520}
+      Script: {instanceID: 1516}
     - Class: 114
-      Script: {instanceID: 1538}
+      Script: {instanceID: 1534}
     - Class: 114
-      Script: {instanceID: 1640}
+      Script: {instanceID: 1636}
     - Class: 114
-      Script: {instanceID: 1774}
+      Script: {instanceID: 1770}
     - Class: 114
-      Script: {instanceID: 1844}
+      Script: {instanceID: 1840}
     - Class: 114
-      Script: {instanceID: 2254}
+      Script: {instanceID: 2250}
     - Class: 114
-      Script: {instanceID: 2398}
+      Script: {instanceID: 2394}
     - Class: 114
-      Script: {instanceID: 2588}
+      Script: {instanceID: 2584}
     - Class: 114
-      Script: {instanceID: 2634}
+      Script: {instanceID: 2630}
     - Class: 114
-      Script: {instanceID: 2648}
+      Script: {instanceID: 2644}
     - Class: 114
-      Script: {instanceID: 2682}
+      Script: {instanceID: 2678}
     - Class: 114
-      Script: {instanceID: 2764}
+      Script: {instanceID: 2760}
     - Class: 114
-      Script: {instanceID: 2836}
+      Script: {instanceID: 2832}
     - Class: 114
-      Script: {instanceID: 2854}
+      Script: {instanceID: 2850}
     - Class: 114
-      Script: {instanceID: 2954}
+      Script: {instanceID: 2950}
     - Class: 114
-      Script: {instanceID: 2980}
+      Script: {instanceID: 2978}
     - Class: 114
-      Script: {instanceID: 3088}
+      Script: {instanceID: 3086}
     - Class: 114
-      Script: {instanceID: 3200}
+      Script: {instanceID: 3198}
     - Class: 114
-      Script: {instanceID: 3270}
+      Script: {instanceID: 3268}
     - Class: 114
-      Script: {instanceID: 3344}
+      Script: {instanceID: 3342}
     - Class: 114
       Script: {instanceID: 3480}
     - Class: 114
@@ -186,7 +192,7 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 5466}
     - Class: 114
-      Script: {instanceID: 5790}
+      Script: {instanceID: 5792}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -210,6 +216,126 @@ ScriptsOnlyBuild:
     - Class: 224
       Script: {instanceID: 0}
     - Class: 850595691
+      Script: {instanceID: 0}
+    Assets/Scenes/Congratulations.unity:
+    - Class: 1
+      Script: {instanceID: 0}
+    - Class: 4
+      Script: {instanceID: 0}
+    - Class: 20
+      Script: {instanceID: 0}
+    - Class: 21
+      Script: {instanceID: 0}
+    - Class: 28
+      Script: {instanceID: 0}
+    - Class: 48
+      Script: {instanceID: 0}
+    - Class: 74
+      Script: {instanceID: 0}
+    - Class: 81
+      Script: {instanceID: 0}
+    - Class: 91
+      Script: {instanceID: 0}
+    - Class: 95
+      Script: {instanceID: 0}
+    - Class: 104
+      Script: {instanceID: 0}
+    - Class: 114
+      Script: {instanceID: 1450}
+    - Class: 114
+      Script: {instanceID: 1452}
+    - Class: 114
+      Script: {instanceID: 1758}
+    - Class: 114
+      Script: {instanceID: 2250}
+    - Class: 114
+      Script: {instanceID: 2678}
+    - Class: 114
+      Script: {instanceID: 2850}
+    - Class: 114
+      Script: {instanceID: 3342}
+    - Class: 114
+      Script: {instanceID: 3352}
+    - Class: 114
+      Script: {instanceID: 3464}
+    - Class: 115
+      Script: {instanceID: 0}
+    - Class: 128
+      Script: {instanceID: 0}
+    - Class: 157
+      Script: {instanceID: 0}
+    - Class: 196
+      Script: {instanceID: 0}
+    - Class: 212
+      Script: {instanceID: 0}
+    - Class: 213
+      Script: {instanceID: 0}
+    - Class: 222
+      Script: {instanceID: 0}
+    - Class: 223
+      Script: {instanceID: 0}
+    - Class: 224
+      Script: {instanceID: 0}
+    Assets/Scenes/Main menu.unity:
+    - Class: 1
+      Script: {instanceID: 0}
+    - Class: 4
+      Script: {instanceID: 0}
+    - Class: 20
+      Script: {instanceID: 0}
+    - Class: 21
+      Script: {instanceID: 0}
+    - Class: 28
+      Script: {instanceID: 0}
+    - Class: 48
+      Script: {instanceID: 0}
+    - Class: 74
+      Script: {instanceID: 0}
+    - Class: 81
+      Script: {instanceID: 0}
+    - Class: 91
+      Script: {instanceID: 0}
+    - Class: 95
+      Script: {instanceID: 0}
+    - Class: 104
+      Script: {instanceID: 0}
+    - Class: 114
+      Script: {instanceID: 1450}
+    - Class: 114
+      Script: {instanceID: 1452}
+    - Class: 114
+      Script: {instanceID: 1758}
+    - Class: 114
+      Script: {instanceID: 2250}
+    - Class: 114
+      Script: {instanceID: 2678}
+    - Class: 114
+      Script: {instanceID: 2850}
+    - Class: 114
+      Script: {instanceID: 2956}
+    - Class: 114
+      Script: {instanceID: 3342}
+    - Class: 114
+      Script: {instanceID: 3464}
+    - Class: 114
+      Script: {instanceID: 5562}
+    - Class: 115
+      Script: {instanceID: 0}
+    - Class: 128
+      Script: {instanceID: 0}
+    - Class: 157
+      Script: {instanceID: 0}
+    - Class: 196
+      Script: {instanceID: 0}
+    - Class: 212
+      Script: {instanceID: 0}
+    - Class: 213
+      Script: {instanceID: 0}
+    - Class: 222
+      Script: {instanceID: 0}
+    - Class: 223
+      Script: {instanceID: 0}
+    - Class: 224
       Script: {instanceID: 0}
   scriptHashData:
   - hash:
@@ -370,7 +496,7 @@ ScriptsOnlyBuild:
     className: CinemachinePixelPerfect
   - hash:
       serializedVersion: 2
-      Hash: da5ec42a8a642164c33e6193ce4e1590
+      Hash: e8df87166a65a5167f81a314567f3e5b
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: Player
@@ -466,6 +592,12 @@ ScriptsOnlyBuild:
     className: WeaponGrab
   - hash:
       serializedVersion: 2
+      Hash: eeab0a6e8f8fef43bb82fca947272a9d
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: Menu
+  - hash:
+      serializedVersion: 2
       Hash: dd9f9aa4a20ee8f80b7f43431d6371b2
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
@@ -536,6 +668,12 @@ ScriptsOnlyBuild:
     assemblyName: UnityEngine.UI.dll
     namespaceName: UnityEngine.EventSystems
     className: StandaloneInputModule
+  - hash:
+      serializedVersion: 2
+      Hash: 1a04b1fcc48f592cd0c0a33074c30067
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: CongatulationMenu
   - hash:
       serializedVersion: 2
       Hash: f7858108331b563fb41b80b729297acd
@@ -916,7 +1054,7 @@ ScriptsOnlyBuild:
     className: TMP_ScrollbarEventHandler
   - hash:
       serializedVersion: 2
-      Hash: 4e7b16ec7a8bb6dd93e487c6b15e80b4
+      Hash: 7f435b9a6e184e52e834cfae71e0d8e8
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: Room
@@ -926,6 +1064,12 @@ ScriptsOnlyBuild:
     assemblyName: Unity.2D.Animation.Runtime.dll
     namespaceName: UnityEngine.U2D.Animation
     className: BufferManager
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: StartGameScene
   - hash:
       serializedVersion: 2
       Hash: 8220b46879dc5e37db1b940c938f5744
@@ -982,5 +1126,7 @@ ScriptsOnlyBuild:
     className: PlayerMove
   platform: 19
   scenePathNames:
+  - Assets/Scenes/Main menu.unity
   - Assets/Scenes/Alex's scene.unity
-  playerPath: C:/Users/User/Epic Shooter/Versions/Epic Shooter.exe
+  - Assets/Scenes/Congratulations.unity
+  playerPath: C:/Users/User/Epic Shooter/Build/Epic Shooter.exe
