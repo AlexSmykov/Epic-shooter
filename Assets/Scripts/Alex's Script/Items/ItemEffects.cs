@@ -54,6 +54,10 @@ public class ItemEffects : MonoBehaviour
         Effects[41] = Effect_41;
     }
 
+    public void SaveEffects(Collider2D collision, int WeaponIndex)
+    {
+        collision.GetComponent<Player>().PlayerGuns[WeaponIndex].Save();
+    }
     public void UseEffect(Collider2D collision, int ItemIndex)
     {
         Effects[ItemIndex](collision);
@@ -69,30 +73,37 @@ public class ItemEffects : MonoBehaviour
     private void WeaponDmgUp(Collider2D collision, float UpEffect, int WeaponIndex)
     {
         collision.GetComponent<Player>().PlayerGuns[WeaponIndex].DamageBonusLevel += UpEffect;
+        SaveEffects(collision, WeaponIndex);
     }
     private void WeaponFireRateUp(Collider2D collision, float UpEffect, int WeaponIndex)
     {
         collision.GetComponent<Player>().PlayerGuns[WeaponIndex].FireRateBonusLevel += UpEffect;
+        SaveEffects(collision, WeaponIndex);
     }
     private void WeaponBulletSpeedUp(Collider2D collision, float UpEffect, int WeaponIndex)
     {
         collision.GetComponent<Player>().PlayerGuns[WeaponIndex].BulletSpeedBonusLevel += UpEffect;
+        SaveEffects(collision, WeaponIndex);
     }
     private void WeaponPenetrationUp(Collider2D collision, float UpEffect, int WeaponIndex)
     {
         collision.GetComponent<Player>().PlayerGuns[WeaponIndex].PenetrationBonusLevel += (int)UpEffect;
+        SaveEffects(collision, WeaponIndex);
     }
     private void WeaponClipSizeUp(Collider2D collision, float UpEffect, int WeaponIndex)
     {
         collision.GetComponent<Player>().PlayerGuns[WeaponIndex].ClipSize += (int)UpEffect;
+        SaveEffects(collision, WeaponIndex);
     }
     private void WeaponMultiShotUp(Collider2D collision, float UpEffect, int WeaponIndex)
     {
         collision.GetComponent<Player>().PlayerGuns[WeaponIndex].MultiShotBonusLevel += (int)UpEffect;
+        SaveEffects(collision, WeaponIndex);
     }
     private void WeaponRecoilUp(Collider2D collision, float UpEffect, int WeaponIndex)
     {
         collision.GetComponent<Player>().PlayerGuns[WeaponIndex].ClipRecoilBonusLevel += (int)UpEffect;
+        SaveEffects(collision, WeaponIndex);
     }
     
     private void Effect_0(Collider2D collision)

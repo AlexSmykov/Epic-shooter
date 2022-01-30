@@ -160,7 +160,7 @@ MonoBehaviour:
   Keys: 0
   Materials: 0
   Speed: 5
-  ChestPickupCount: 8
+  ChestPickupCount: 5
   StartWeaponIndex: 0
   _Offset: -10
   PlaceForGun: {fileID: 2128983823507203290}
@@ -719,7 +719,7 @@ PrefabInstance:
     - target: {fileID: 8266216276020101544, guid: 5d3938a2d1879714eb6376e2d124c1e2,
         type: 3}
       propertyPath: BulletsCount
-      value: 450
+      value: 300
       objectReference: {fileID: 0}
     - target: {fileID: 8266216276020101546, guid: 5d3938a2d1879714eb6376e2d124c1e2,
         type: 3}

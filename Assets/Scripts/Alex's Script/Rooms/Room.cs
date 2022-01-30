@@ -47,7 +47,7 @@ public class Room : MonoBehaviour
     public bool RewardActive;
     public bool SpecialReward;
     private bool DoorDestroyed;
-    private bool EndRoom;
+    public bool EndRoom;
     public bool NewFloorReward;
 
     private void Start()
