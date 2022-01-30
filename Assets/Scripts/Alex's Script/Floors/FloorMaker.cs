@@ -40,13 +40,13 @@ public class FloorMaker : MonoBehaviour
         if(CurrentFloor <= MaxFloor)
         {
             GameObject.FindGameObjectWithTag("CurrentFloor").GetComponent<Text>().text = "Current floor: " + CurrentFloor.ToString() + "/" + MaxFloor.ToString();
-            DefaultRoomCount = UnityEngine.Random.Range(8 + CurrentFloor, 11 + CurrentFloor * 3);
+            DefaultRoomCount = UnityEngine.Random.Range(6 + CurrentFloor, 9 + CurrentFloor * 2);
             for (int i = 0; i < DefaultRoomCount; i++)
             {
                 PlaceOneRoomFromArray(AllDefaultRooms.Items);
             }
 
-            ChestRoomCount = UnityEngine.Random.Range(1 + CurrentFloor, (int)(3 + CurrentFloor * 1.5));
+            ChestRoomCount = UnityEngine.Random.Range((int)(1 + CurrentFloor * 0.6), (int)(3 + CurrentFloor * 1.2));
             for (int i = 0; i < ChestRoomCount; i++)
             {
                 PlaceOneRoomFromArray(AllChestRooms.Items);
@@ -64,7 +64,7 @@ public class FloorMaker : MonoBehaviour
                 PlaceOneRoomFromArray(AllWorkshopRooms.Items);
             }
 
-            BossRoomCount = (int)(1 + CurrentFloor / 1.5);
+            BossRoomCount = (int)(1 + CurrentFloor / 1.7);
             for (int i = 0; i < BossRoomCount; i++)
             {
                 PlaceOneRoomFromArray(AllBossRooms.Items);
@@ -87,6 +87,7 @@ public class FloorMaker : MonoBehaviour
     private void PlaceOneRoomFromArray(GameObject[] PossibleRooms)
     {
         Vector2Int NewRoom = VacantPlacesFind();
+
         bool NeedDoorUp = false;
         bool NeedDoorDown = false;
         bool NeedDoorLeft = false;
