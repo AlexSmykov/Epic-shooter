@@ -61,12 +61,13 @@
      <Compile Include="Assets\Scripts\Alex&apos;s Script\Other\FloatingDamage.cs" />
      <Compile Include="Assets\Scripts\Alex&apos;s Script\Bullet\Bullet.cs" />
      <Compile Include="Assets\Scripts\Alex&apos;s Script\Guns\WeaponGrab.cs" />
-     <Compile Include="Assets\Menu.cs" />
+     <Compile Include="Assets\Scripts\Alex&apos;s Script\Menu\Menu.cs" />
      <Compile Include="Assets\Scripts\Alex&apos;s Script\Guns\Gun.cs" />
      <Compile Include="Assets\Scripts\ClonePlayer.cs" />
      <Compile Include="Assets\Scripts\Alex&apos;s Script\Enemies\Enemy.cs" />
      <Compile Include="Assets\Scripts\Alex&apos;s Script\Floors\FloorMaker.cs" />
      <Compile Include="Assets\Scripts\Alex&apos;s Script\Items\ItemInfo.cs" />
+     <Compile Include="Assets\Scripts\Alex&apos;s Script\Menu\CongatulationMenu.cs" />
      <Compile Include="Assets\Scripts\Alex&apos;s Script\Shop\ShopPlaceSpawnPoint.cs" />
      <Compile Include="Assets\Scripts\Alex&apos;s Script\Enemies\MoveToTarget.cs" />
      <Compile Include="Assets\Scripts\Alex&apos;s Script\Other\CameraMove.cs" />
@@ -79,7 +80,7 @@
      <Compile Include="Assets\Scripts\Alex&apos;s Script\Other\Pickups.cs" />
      <Compile Include="Assets\Scripts\Alex&apos;s Script\Shop\ShopCostForObjects.cs" />
      <Compile Include="Assets\Scripts\Alex&apos;s Script\Enemies\SpawnEnemies.cs" />
-     <Compile Include="Assets\NewFloor.cs" />
+     <Compile Include="Assets\Scripts\Alex&apos;s Script\Floors\NewFloor.cs" />
      <Compile Include="Assets\Scripts\Alex&apos;s Script\Chest\Chest.cs" />
      <Compile Include="Assets\Scripts\Alex&apos;s Script\Shop\ShopItemSpawn.cs" />
      <Compile Include="Assets\Scripts\GameControl.cs" />
@@ -87,7 +88,7 @@
      <Compile Include="Assets\Scripts\Alex&apos;s Script\Items\Item.cs" />
      <Compile Include="Assets\Scripts\CameraShake.cs" />
      <Compile Include="Assets\Scripts\Alex&apos;s Script\Rooms\Room.cs" />
-     <Compile Include="Assets\StartGameScene.cs" />
+     <Compile Include="Assets\Scripts\Alex&apos;s Script\Menu\StartGameScene.cs" />
      <Compile Include="Assets\Scripts\GunControl.cs" />
      <Compile Include="Assets\Scripts\PlayerMoving.cs" />
      <Compile Include="Assets\Scripts\Alex&apos;s Script\Player\HealthBar.cs" />

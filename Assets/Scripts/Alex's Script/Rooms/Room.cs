@@ -37,6 +37,7 @@ public class Room : MonoBehaviour
 
     public GameObject DoorEffect;
     public GameObject RewardSpawnEffect;
+    public GameObject Bg;
     private ObjectStorage Objects;
     public ArrayHolder RoomClearRewards;
 
@@ -46,11 +47,13 @@ public class Room : MonoBehaviour
     public bool RewardActive;
     public bool SpecialReward;
     private bool DoorDestroyed;
+    private bool EndRoom;
     public bool NewFloorReward;
 
     private void Start()
     {
         Objects = GameObject.FindGameObjectWithTag("Storage").GetComponent<ObjectStorage>();
+        Bg = GameObject.FindGameObjectWithTag("BlackBG");
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -211,6 +214,10 @@ public class Room : MonoBehaviour
             if (NewFloorReward)
             {
                 LaddersPlacesSpawn();
+            }
+            if(EndRoom)
+            {
+                Bg.GetComponent<Animator>().Play("GameComplete");
             }
         }
     }

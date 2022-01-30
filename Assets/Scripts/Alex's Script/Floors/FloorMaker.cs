@@ -11,9 +11,10 @@ public class FloorMaker : MonoBehaviour
     public ArrayHolder AllStartRooms;
     public ArrayHolder AllDefaultRooms;
     public ArrayHolder AllChestRooms;
-    public ArrayHolder AllBossRooms;
     public ArrayHolder AllShopRooms;
     public ArrayHolder AllWorkshopRooms;
+    public ArrayHolder AllBossRooms;
+    public ArrayHolder AllSuperBossRooms;
     public GameObject Player;
     public GameObject Storage;
     public List<GameObject> Trash;
@@ -24,6 +25,7 @@ public class FloorMaker : MonoBehaviour
     public int ChestRoomCount;
     public int BossRoomCount;
     public int CurrentFloor;
+    public int MaxFloor;
 
     private void Start()
     {
@@ -33,37 +35,44 @@ public class FloorMaker : MonoBehaviour
         RoomsMap[25, 25] = Instantiate(AllStartRooms.Items[UnityEngine.Random.Range(0, AllStartRooms.Items.Length)], new Vector3(0, 0, 0), Quaternion.identity); 
         Instantiate(Player, new Vector3(0, 0, 0), Quaternion.identity);
         Instantiate(Storage, new Vector3(0, 0, 0), Quaternion.identity);
+
         CurrentFloor = PlayerPrefs.GetInt("CurrentFloor", 1);
-        GameObject.FindGameObjectWithTag("CurrentFloor").GetComponent<Text>().text = "Current floor: " + CurrentFloor.ToString() +"/10";
-
-        DefaultRoomCount = PlayerPrefs.GetInt("DefaultRoomCount", UnityEngine.Random.Range(8, 11));
-        for (int i = 0; i < DefaultRoomCount; i++)
+        if(CurrentFloor <= MaxFloor)
         {
-            PlaceOneRoomFromArray(AllDefaultRooms.Items);
+            GameObject.FindGameObjectWithTag("CurrentFloor").GetComponent<Text>().text = "Current floor: " + CurrentFloor.ToString() + "/" + MaxFloor.ToString();
+            DefaultRoomCount = UnityEngine.Random.Range(8 + CurrentFloor, 11 + CurrentFloor * 3);
+            for (int i = 0; i < DefaultRoomCount; i++)
+            {
+                PlaceOneRoomFromArray(AllDefaultRooms.Items);
+            }
+
+            ChestRoomCount = UnityEngine.Random.Range(1 + CurrentFloor, (int)(3 + CurrentFloor * 1.5));
+            for (int i = 0; i < ChestRoomCount; i++)
+            {
+                PlaceOneRoomFromArray(AllChestRooms.Items);
+            }
+
+            ShopRoomCount = 1 + CurrentFloor / 3;
+            for (int i = 0; i < ShopRoomCount; i++)
+            {
+                PlaceOneRoomFromArray(AllShopRooms.Items);
+            }
+
+            WorkshopRoomCount = 1 + CurrentFloor / 3;
+            for (int i = 0; i < WorkshopRoomCount; i++)
+            {
+                PlaceOneRoomFromArray(AllWorkshopRooms.Items);
+            }
+
+            BossRoomCount = (int)(1 + CurrentFloor / 1.5);
+            for (int i = 0; i < BossRoomCount; i++)
+            {
+                PlaceOneRoomFromArray(AllBossRooms.Items);
+            }
         }
-
-        ChestRoomCount = PlayerPrefs.GetInt("ChestRoomCount", UnityEngine.Random.Range(1, 3));
-        for (int i = 0; i < ChestRoomCount; i++)
+        else
         {
-            PlaceOneRoomFromArray(AllChestRooms.Items);
-        }
-
-        ShopRoomCount = PlayerPrefs.GetInt("ShopRoomCount", 1);
-        for (int i = 0; i < ShopRoomCount; i++)
-        {
-            PlaceOneRoomFromArray(AllShopRooms.Items);
-        }
-
-        WorkshopRoomCount = PlayerPrefs.GetInt("WorkshopRoomCount", 1);
-        for (int i = 0; i < WorkshopRoomCount; i++)
-        {
-            PlaceOneRoomFromArray(AllWorkshopRooms.Items);
-        }
-
-        BossRoomCount = PlayerPrefs.GetInt("BossRoomCount", 1);
-        for (int i = 0; i < BossRoomCount; i++)
-        {
-            PlaceOneRoomFromArray(AllBossRooms.Items);
+            PlaceOneRoomFromArray(AllSuperBossRooms.Items);
         }
 
         PlaceDoors();
@@ -71,12 +80,8 @@ public class FloorMaker : MonoBehaviour
 
     public void Save()
     {
-        PlayerPrefs.SetInt("DefaultRoomCount", DefaultRoomCount + UnityEngine.Random.Range(2, 4));
-        PlayerPrefs.SetInt("ChestRoomCount", ChestRoomCount + UnityEngine.Random.Range(1, 2));
-        PlayerPrefs.SetInt("BossRoomCount", ++BossRoomCount);
-        PlayerPrefs.SetInt("ShopRoomCount", ShopRoomCount);
-        PlayerPrefs.SetInt("WorkshopRoomCount", WorkshopRoomCount);
-        PlayerPrefs.SetInt("CurrentFloor", ++CurrentFloor);
+        CurrentFloor++;
+        PlayerPrefs.SetInt("CurrentFloor", CurrentFloor);
     }
 
     private void PlaceOneRoomFromArray(GameObject[] PossibleRooms)
