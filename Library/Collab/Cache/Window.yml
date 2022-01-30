@@ -14,12 +14,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   SimpleSelectedItems:
     m_Keys:
+    - Assets/Prefabs/Alex's/Pickups/PistolBullets.prefab
     - Assets/Prefabs/Alex's/Player.prefab
-    - Assets/Scenes/Congratulations.unity
-    - Assets/Scripts/Alex's Script/Guns/Gun.cs
-    - Assets/Sprites/Alex's/Enemies/Red slime/Move_Move and Idle Red_1.png
+    - Assets/Scripts/Alex's Script/Chest/Chest.cs
     - 
-    m_Values: 0000000000
+    m_Values: 00000000
   RevisionSummary: 
   ChangesSearchValue: 
   SelectedHistoryRevision: 

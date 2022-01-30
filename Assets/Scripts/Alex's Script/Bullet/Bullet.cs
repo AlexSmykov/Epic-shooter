@@ -18,6 +18,8 @@ public class Bullet : MonoBehaviour
 	public bool BangAfterDestroy;
 	public float BangRadius;
 	public GameObject Bang;
+
+	private float PenetrationReloadTime;
 	
 
     private void Start()
@@ -29,6 +31,14 @@ public class Bullet : MonoBehaviour
     private void FixedUpdate()
 	{
 		transform.Translate(Vector2.right * Speed * Time.fixedDeltaTime);
+		if(PenetrationReloadTime > 0)
+        {
+			PenetrationReloadTime -= Time.fixedDeltaTime;
+		}
+        else if (!GetComponent<CircleCollider2D>().enabled)
+		{
+			GetComponent<CircleCollider2D>().enabled = true;
+		}
 
 		if(CurrentLifeTime > LifeTime)
         {
@@ -51,6 +61,8 @@ public class Bullet : MonoBehaviour
 				{
 					collision.collider.GetComponent<Enemy>().TakeDamage(-Damage);
 					PenetrationCount--;
+					PenetrationReloadTime = 0.1f;
+					GetComponent<CircleCollider2D>().enabled = false;
 				}
                 else
 				{

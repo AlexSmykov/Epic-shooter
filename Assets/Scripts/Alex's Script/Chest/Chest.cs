@@ -97,26 +97,17 @@ public class Chest : MonoBehaviour
             {
                 Pickup = Instantiate(Objects.GivePickupByIndex(1), new Vector3(0, 0, 0), Quaternion.identity);
             }
-            else if (Chooser < 68)
+            else if (Chooser < 75)
             {
                 Pickup = Instantiate(Objects.GivePickupByIndex(Random.Range(2, 4)), new Vector3(0, 0, 0), Quaternion.identity);
             }
-            else if(Chooser < 75)
+            else if(Chooser < 83)
             {
                 Pickup = Instantiate(Objects.GivePickupByIndex(5), new Vector3(0, 0, 0), Quaternion.identity);
             }
             else
             {
-                int index;
-                while (true)
-                {
-                    index = Random.Range(6, 11);
-                    if(PlaceForGun.GetComponent<WeaponSwitch>().UnlockedGuns[index - 6])
-                    {
-                        break;
-                    }
-                }
-                Pickup = Instantiate(Objects.GivePickupByIndex(index), new Vector3(0, 0, 0), Quaternion.identity);
+                Pickup = Instantiate(Objects.GivePickupByIndex(Random.Range(6, 11)), new Vector3(0, 0, 0), Quaternion.identity);
             }
             Vector3 Position = new Vector3(gameObject.transform.position.x + Random.Range(-5, 5) / 2, gameObject.transform.position.y + Random.Range(-1, 1), gameObject.transform.position.z);
             Pickup.transform.position = Position;
