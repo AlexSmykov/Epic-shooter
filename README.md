@@ -18,5 +18,5 @@ I think, it's important
 You need go to last floor (11) and beat the main boss
 You can use weapons, upgrades and other items
 ## Download
-https://github.com/DiabloZX/Epic-shooter/releases/tag/v0.1.1
+You can download game [here](https://github.com/DiabloZX/Epic-shooter/releases/tag/v0.1.1)
 
