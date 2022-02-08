@@ -5,14 +5,26 @@ using UnityEngine.SceneManagement;
 
 public class NewFloor : MonoBehaviour
 {
+    private float SpawnTime = 2;
+    private bool FloorChanging = false;
+
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.CompareTag("Player"))
+        if (collision.CompareTag("Player") && !FloorChanging && SpawnTime <= 0)
         {
+            FloorChanging = true;
             GameObject Bg = GameObject.FindGameObjectWithTag("BlackBG");
             Bg.SetActive(true);
             Bg.GetComponent<Animator>().Play("BgFloorEnd");
             StartCoroutine(EndFloor(collision));
+        }
+    }
+
+    private void Update()
+    {
+        if(SpawnTime > 0)
+        {
+            SpawnTime -= Time.deltaTime;   
         }
     }
 

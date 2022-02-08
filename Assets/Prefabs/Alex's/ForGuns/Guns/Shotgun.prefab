@@ -106,18 +106,18 @@ MonoBehaviour:
   CurrentClipSize: 0
   BulletsCount: 150
   ShotBulletPenalty: 1
-  Damage: 6
+  Damage: 7
   BulletSpeed: 20
   Accuracy: 20
   SecondLvl: {fileID: 21300000, guid: 3a4a75d3ad6ad7d4f9164902676fcf08, type: 3}
   ThirdLvl: {fileID: 21300000, guid: f285348ba2a7c3348b7c1618560c500f, type: 3}
   DamageBonusLevel: 1
   FireRateBonusLevel: 1
-  PenetrationBonusLevel: 1
   BulletSpeedBonusLevel: 1
   ClipRecoilBonusLevel: 1
   ClipSizeBonusLevel: 1
   MultiShotBonusLevel: 6
+  PenetrationBonusLevel: 1
 --- !u!1 &8266216276453710491
 GameObject:
   m_ObjectHideFlags: 0

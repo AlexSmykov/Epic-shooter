@@ -40,20 +40,19 @@ public class FloorMaker : MonoBehaviour
         RoomTypeOnTheMap[12, 12] = "Start";
         RoomsChecked[12, 12] = true;
         RoomsMap[12, 12] = Instantiate(AllStartRooms.Items[UnityEngine.Random.Range(0, AllStartRooms.Items.Length)], new Vector3(0, 0, 0), Quaternion.identity); 
-        Instantiate(Player, new Vector3(0, 0, 0), Quaternion.identity);
         Instantiate(Storage, new Vector3(0, 0, 0), Quaternion.identity);
 
         CurrentFloor = PlayerPrefs.GetInt("CurrentFloor", 1);
         if(CurrentFloor <= MaxFloor)
         {
             GameObject.FindGameObjectWithTag("CurrentFloor").GetComponent<Text>().text = "Current floor: " + CurrentFloor.ToString() + "/" + MaxFloor.ToString();
-            DefaultRoomCount = UnityEngine.Random.Range(6 + CurrentFloor, 9 + CurrentFloor * 2);
+            DefaultRoomCount = UnityEngine.Random.Range(5 + CurrentFloor, 8 + CurrentFloor * 2);
             for (int i = 0; i < DefaultRoomCount; i++)
             {
                 PlaceOneRoomFromArray(AllDefaultRooms.Items, "Default");
             }
 
-            ChestRoomCount = UnityEngine.Random.Range((int)(1 + CurrentFloor * 0.6), (int)(3 + CurrentFloor * 1.2));
+            ChestRoomCount = UnityEngine.Random.Range((int)(2 + CurrentFloor * 0.6), (int)(3 + CurrentFloor * 1.2));
             for (int i = 0; i < ChestRoomCount; i++)
             {
                 PlaceOneRoomFromArray(AllChestRooms.Items, "Chest");
@@ -82,7 +81,8 @@ public class FloorMaker : MonoBehaviour
             PlaceOneRoomFromArray(AllSuperBossRooms.Items, "SuperBoss");
         }
 
-        PlaceDoors();
+        PlaceDoors(); 
+        Instantiate(Player, new Vector3(0, 0, 0), Quaternion.identity);
     }
 
     public void Save()
@@ -120,10 +120,10 @@ public class FloorMaker : MonoBehaviour
         while (true && i < 1000)
         {
             GameObject NewRandomRoom = PossibleRooms[UnityEngine.Random.Range(0, PossibleRooms.Length)];
-            if (!(NeedDoorUp && !NewRandomRoom.GetComponent<Room>().PossibleDoorUp) &&
-                !(NeedDoorDown && !NewRandomRoom.GetComponent<Room>().PossibleDoorDown) &&
-                !(NeedDoorLeft && !NewRandomRoom.GetComponent<Room>().PossibleDoorLeft) &&
-                !(NeedDoorRight && !NewRandomRoom.GetComponent<Room>().PossibleDoorRight))
+            if (!(NeedDoorUp && !NewRandomRoom.transform.GetChild(0).GetComponent<Room>().PossibleDoorUp) &&
+                !(NeedDoorDown && !NewRandomRoom.transform.GetChild(0).GetComponent<Room>().PossibleDoorDown) &&
+                !(NeedDoorLeft && !NewRandomRoom.transform.GetChild(0).GetComponent<Room>().PossibleDoorLeft) &&
+                !(NeedDoorRight && !NewRandomRoom.transform.GetChild(0).GetComponent<Room>().PossibleDoorRight))
             {
                 RoomsMap[NewRoom.x, NewRoom.y] = Instantiate(NewRandomRoom, new Vector3((NewRoom.x - 12) * 24, (NewRoom.y - 12) * 14, 0), Quaternion.identity);
                 RoomsOnTheMap[NewRoom.x, NewRoom.y] = true;
@@ -145,54 +145,26 @@ public class FloorMaker : MonoBehaviour
                 {
                     if (RoomsOnTheMap[x + 1, y])
                     {
-                        RoomsMap[x, y].GetComponent<Room>().DoorRight.SetActive(true);
-                        RoomsMap[x, y].GetComponent<Room>().DoorRightLocker.SetActive(false);
-                        RoomsMap[x + 1, y].GetComponent<Room>().DoorLeft.SetActive(true);
-                        RoomsMap[x + 1, y].GetComponent<Room>().DoorLeftLocker.SetActive(false);
-                    }
-                    else
-                    {
-                        RoomsMap[x, y].GetComponent<Room>().DoorRight.SetActive(false);
-                        RoomsMap[x, y].GetComponent<Room>().DoorRightLocker.SetActive(true);
+                        RoomsMap[x, y].transform.GetChild(0).GetComponent<Room>().DoorRight.GetComponent<ArrayHolder>().Items[1].SetActive(false);
+                        RoomsMap[x + 1, y].transform.GetChild(0).GetComponent<Room>().DoorLeft.GetComponent<ArrayHolder>().Items[1].SetActive(false);
                     }
 
                     if (RoomsOnTheMap[x - 1, y])
                     {
-                        RoomsMap[x, y].GetComponent<Room>().DoorLeft.SetActive(true);
-                        RoomsMap[x, y].GetComponent<Room>().DoorLeftLocker.SetActive(false);
-                        RoomsMap[x - 1, y].GetComponent<Room>().DoorRight.SetActive(true);
-                        RoomsMap[x - 1, y].GetComponent<Room>().DoorRightLocker.SetActive(false);
-                    }
-                    else
-                    {
-                        RoomsMap[x, y].GetComponent<Room>().DoorLeft.SetActive(false);
-                        RoomsMap[x, y].GetComponent<Room>().DoorLeftLocker.SetActive(true);
+                        RoomsMap[x, y].transform.GetChild(0).GetComponent<Room>().DoorLeft.GetComponent<ArrayHolder>().Items[1].SetActive(false);
+                        RoomsMap[x - 1, y].transform.GetChild(0).GetComponent<Room>().DoorRight.GetComponent<ArrayHolder>().Items[1].SetActive(false);
                     }
 
                     if (RoomsOnTheMap[x, y + 1])
                     {
-                        RoomsMap[x, y].GetComponent<Room>().DoorUp.SetActive(true);
-                        RoomsMap[x, y].GetComponent<Room>().DoorUpLocker.SetActive(false);
-                        RoomsMap[x, y + 1].GetComponent<Room>().DoorDown.SetActive(true);
-                        RoomsMap[x, y + 1].GetComponent<Room>().DoorDownLocker.SetActive(false);
-                    }
-                    else
-                    {
-                        RoomsMap[x, y].GetComponent<Room>().DoorUp.SetActive(false);
-                        RoomsMap[x, y].GetComponent<Room>().DoorUpLocker.SetActive(true);
+                        RoomsMap[x, y].transform.GetChild(0).GetComponent<Room>().DoorUp.GetComponent<ArrayHolder>().Items[1].SetActive(false);
+                        RoomsMap[x, y + 1].transform.GetChild(0).GetComponent<Room>().DoorDown.GetComponent<ArrayHolder>().Items[1].SetActive(false);
                     }
 
                     if (RoomsOnTheMap[x, y - 1])
                     {
-                        RoomsMap[x, y].GetComponent<Room>().DoorDown.SetActive(true);
-                        RoomsMap[x, y].GetComponent<Room>().DoorDownLocker.SetActive(false);
-                        RoomsMap[x, y - 1].GetComponent<Room>().DoorUp.SetActive(true);
-                        RoomsMap[x, y - 1].GetComponent<Room>().DoorUpLocker.SetActive(false);
-                    }
-                    else
-                    {
-                        RoomsMap[x, y].GetComponent<Room>().DoorDown.SetActive(false);
-                        RoomsMap[x, y].GetComponent<Room>().DoorDownLocker.SetActive(true);
+                        RoomsMap[x, y].transform.GetChild(0).GetComponent<Room>().DoorDown.GetComponent<ArrayHolder>().Items[1].SetActive(false);
+                        RoomsMap[x, y - 1].transform.GetChild(0).GetComponent<Room>().DoorUp.GetComponent<ArrayHolder>().Items[1].SetActive(false);
                     }
                 }
             }
@@ -244,28 +216,28 @@ public class FloorMaker : MonoBehaviour
 
         if(RoomsOnTheMap[x + 1, y])
         {
-            if (!RoomsMap[x + 1, y].GetComponent<Room>().PossibleDoorLeft)
+            if (!RoomsMap[x + 1, y].transform.GetChild(0).GetComponent<Room>().PossibleDoorLeft)
             {
                 Can = false;
             }
         }
         if (RoomsOnTheMap[x - 1, y])
         {
-            if (!RoomsMap[x - 1, y].GetComponent<Room>().PossibleDoorRight)
+            if (!RoomsMap[x - 1, y].transform.GetChild(0).GetComponent<Room>().PossibleDoorRight)
             {
                 Can = false;
             }
         }
         if (RoomsOnTheMap[x, y + 1])
         {
-            if (!RoomsMap[x, y + 1].GetComponent<Room>().PossibleDoorDown)
+            if (!RoomsMap[x, y + 1].transform.GetChild(0).GetComponent<Room>().PossibleDoorDown)
             {
                 Can = false;
             }
         }
         if (RoomsOnTheMap[x, y - 1])
         {
-            if (!RoomsMap[x, y - 1].GetComponent<Room>().PossibleDoorUp)
+            if (!RoomsMap[x, y - 1].transform.GetChild(0).GetComponent<Room>().PossibleDoorUp)
             {
                 Can = false;
             }

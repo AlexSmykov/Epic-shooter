@@ -31234,6 +31234,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2162680414947874319, guid: ee1c10f0748d1e54b9f140b7af2011c3,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5673084594893619189, guid: ee1c10f0748d1e54b9f140b7af2011c3,
         type: 3}
       propertyPath: m_SortingOrder
@@ -31243,6 +31248,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Tile
+      objectReference: {fileID: 0}
+    - target: {fileID: 8071100916762466603, guid: ee1c10f0748d1e54b9f140b7af2011c3,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 15303, guid: 0000000000000000f000000000000000, type: 0}
+    - target: {fileID: 8147229974730592152, guid: ee1c10f0748d1e54b9f140b7af2011c3,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ee1c10f0748d1e54b9f140b7af2011c3, type: 3}

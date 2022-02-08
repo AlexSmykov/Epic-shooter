@@ -7,7 +7,13 @@ public class Pickups : MonoBehaviour
     public int PickupIndex;
     public int PickupCount;
     private float SpawnlifeTime = 0.3f;
+
+    private float PickupIdleEffectTime;
+    private float StartPickupIdleEffectTime = 2f;
+
+
     public GameObject PickupEffect;
+    public GameObject PickupIdleEffect;
     public GameObject PlaceForGun;
 
     void Start()
@@ -51,8 +57,19 @@ public class Pickups : MonoBehaviour
         Instantiate(PickupEffect, transform.position, Quaternion.identity);
     }
 
+    [System.Obsolete]
     private void Update()
     {
         SpawnlifeTime -= Time.deltaTime;
+
+        if(PickupIdleEffectTime < 0)
+        {
+            PickupIdleEffectTime = Random.RandomRange(StartPickupIdleEffectTime * 0.8f, StartPickupIdleEffectTime * 1.2f);
+            Instantiate(PickupIdleEffect, transform.position, Quaternion.identity);
+        }
+        else
+        {
+            PickupIdleEffectTime -= Time.deltaTime;
+        }
     }
 }
