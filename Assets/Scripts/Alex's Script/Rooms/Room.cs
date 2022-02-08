@@ -10,42 +10,28 @@ public class Room : MonoBehaviour
     public GameObject DoorLeft;
     public GameObject DoorRight;
 
-    [Header("DoorLockers")]
-    public GameObject DoorUpLocker;
-    public GameObject DoorDownLocker;
-    public GameObject DoorLeftLocker;
-    public GameObject DoorRightLocker;
-
     [Header("PossibleDoors")]
     public bool PossibleDoorUp;
     public bool PossibleDoorDown;
     public bool PossibleDoorLeft;
     public bool PossibleDoorRight;
 
-    [Header("ObjectsInRoom")]
     public GameObject[] Doors;
-    public GameObject[] DoorBlockers;
-    public Transform[] EnemySpawnPoints;
-    public GameObject[] ChestsSpawnPoints;
-    public GameObject[] ShopPlaceSpawnPoints;
-    public GameObject[] WorkshopPlaceSpawnPoints;
-    public GameObject[] Pickups;
-    public GameObject[] Items;
-    public GameObject[] Weapons;
-    public GameObject[] LaddersPlaceSpawnPoints;
+    public List<List<Transform>> AllObjectsInRoom = new List<List<Transform>>();
     [Space]
 
     public GameObject DoorEffect;
     public GameObject RewardSpawnEffect;
-    public GameObject Bg;
+    private GameObject Bg;
     private ObjectStorage Objects;
     public ArrayHolder RoomClearRewards;
+    public GameObject RoomObjects;
 
     [HideInInspector] public List<GameObject> EnemiesLeft;
 
     private bool Spawned;
-    public bool RewardActive;
-    public bool SpecialReward;
+    public bool ClearReward;
+    public bool ClearSpecialReward;
     private bool DoorDestroyed;
     public bool EndRoom;
     public bool NewFloorReward;
@@ -54,21 +40,36 @@ public class Room : MonoBehaviour
     {
         Objects = GameObject.FindGameObjectWithTag("Storage").GetComponent<ObjectStorage>();
         Bg = GameObject.FindGameObjectWithTag("BlackBG");
+        GetComponent<BoxCollider2D>().enabled = true;
     }
 
+    private void RoomObjectsDeserealization()
+    {
+        for(int i = 0; i < RoomObjects.transform.childCount; i++)
+        {
+            List<Transform> row = new List<Transform>();
+            for (int j = 0; j < RoomObjects.transform.GetChild(i).childCount; j++)
+            {
+                row.Add(RoomObjects.transform.GetChild(i).GetChild(j));
+            }
+            AllObjectsInRoom.Add(row);
+        } 
+    }
+
+    [System.Obsolete]
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if(collision.CompareTag("Player") && !Spawned)
         {
+            RoomObjectsDeserealization();
             Spawned = true;
-
-            EnemiesSpawn(collision);
-            ChestsSpawn();
-            ShopPlacesSpawn();
-            PickupsSpawn();
-            ItemsSpawn(collision);
-            WeaponsSpawn();
-            WorkshopPlacesSpawn();
+            if (AllObjectsInRoom[0].Count > 0) { EnemiesSpawn(collision); }
+            if (AllObjectsInRoom[1].Count > 0) { ChestsSpawn(); }
+            if (AllObjectsInRoom[2].Count > 0) { ShopPlacesSpawn(); }
+            if (AllObjectsInRoom[3].Count > 0) { WorkshopPlacesSpawn(); }
+            if (AllObjectsInRoom[4].Count > 0) { PickupsSpawn(); }
+            if (AllObjectsInRoom[5].Count > 0) { ItemsSpawn(collision); }
+            if (AllObjectsInRoom[6].Count > 0) { WeaponsSpawn(); }
 
             StartCoroutine(CheckEnemiess());
         }
@@ -76,7 +77,7 @@ public class Room : MonoBehaviour
 
     public void EnemiesSpawn(Collider2D collision)
     {
-        foreach (Transform Spawner in EnemySpawnPoints)
+        foreach (Transform Spawner in AllObjectsInRoom[0])
         {
             GameObject Enemy = Instantiate(Spawner.GetComponent<OneItemHolder>().Item, Spawner.position, Quaternion.identity);
             Enemy.transform.parent = transform;
@@ -85,64 +86,79 @@ public class Room : MonoBehaviour
         }
     }
 
+    [System.Obsolete]
     public void ChestsSpawn()
     {
-        foreach (GameObject ChestSpawnPoint in ChestsSpawnPoints)
+        foreach (Transform ChestSpawnPoint in AllObjectsInRoom[1])
         {
             if (ChestSpawnPoint.GetComponent<SpawnChest>().IsWeaponChest)
             {
-                Instantiate(ChestSpawnPoint.GetComponent<SpawnChest>().WeaponChest, ChestSpawnPoint.transform.position, Quaternion.identity);
+                Instantiate(ChestSpawnPoint.GetComponent<SpawnChest>().WeaponChest, ChestSpawnPoint.position, Quaternion.identity);
             }
             else if (ChestSpawnPoint.GetComponent<SpawnChest>().IsItemChest)
             {
-                Instantiate(ChestSpawnPoint.GetComponent<SpawnChest>().ItemChest, ChestSpawnPoint.transform.position, Quaternion.identity);
+                Instantiate(ChestSpawnPoint.GetComponent<SpawnChest>().ItemChest, ChestSpawnPoint.position, Quaternion.identity);
             }
             else if (ChestSpawnPoint.GetComponent<SpawnChest>().IsPickupsChest)
             {
-                Instantiate(ChestSpawnPoint.GetComponent<SpawnChest>().ResourceChest, ChestSpawnPoint.transform.position, Quaternion.identity);
+                Instantiate(ChestSpawnPoint.GetComponent<SpawnChest>().ResourceChest, ChestSpawnPoint.position, Quaternion.identity);
+            }
+            else
+            {
+                int index = Random.RandomRange(0, 3);
+
+                if (index == 0)
+                {
+                    Instantiate(ChestSpawnPoint.GetComponent<SpawnChest>().WeaponChest, ChestSpawnPoint.position, Quaternion.identity);
+                }
+                else if (index == 1)
+                {
+                    Instantiate(ChestSpawnPoint.GetComponent<SpawnChest>().ItemChest, ChestSpawnPoint.position, Quaternion.identity);
+                }
+                else
+                {
+                    Instantiate(ChestSpawnPoint.GetComponent<SpawnChest>().ResourceChest, ChestSpawnPoint.position, Quaternion.identity);
+                }
             }
         }
     }
 
+    [System.Obsolete]
     public void ShopPlacesSpawn()
     {
-        foreach (GameObject shopPlaceSpawnPoint in ShopPlaceSpawnPoints)
+        foreach (Transform shopPlaceSpawnPoint in AllObjectsInRoom[2])
         {
-            GameObject NewShopPlace = Instantiate(shopPlaceSpawnPoint.GetComponent<ShopPlaceSpawnPoint>().ShopPlace, shopPlaceSpawnPoint.transform.position, Quaternion.identity);
-
-            if (shopPlaceSpawnPoint.GetComponent<ShopPlaceSpawnPoint>().IsWeaponPlace)
-            {
-                NewShopPlace.GetComponentInChildren<ShopItemSpawn>().IsWeapon = true;
-            }
-            else if (shopPlaceSpawnPoint.GetComponent<ShopPlaceSpawnPoint>().IsItemPlace)
-            {
-                NewShopPlace.GetComponentInChildren<ShopItemSpawn>().IsItem = true;
-            }
-            else if (shopPlaceSpawnPoint.GetComponent<ShopPlaceSpawnPoint>().IsPickupsPlace)
-            {
-                NewShopPlace.GetComponentInChildren<ShopItemSpawn>().IsPickups = true;
-            }
+            shopPlaceSpawnPoint.GetComponent<ShopPlaceSpawnPoint>().Spawn();
+        }
+    }
+    public void WorkshopPlacesSpawn()
+    {
+        foreach (Transform Place in AllObjectsInRoom[3])
+        {
+            Instantiate(Place.GetComponent<OneItemHolder>().Item, Place.position, Quaternion.identity);
         }
     }
 
     public void PickupsSpawn()
     {
-        foreach (GameObject Pickup in Pickups)
+        foreach (Transform Pickup in AllObjectsInRoom[4])
         {
+            Debug.Log(Pickup);
+            Debug.Log(Pickup.GetComponent<OneItemHolder>().Item);
             if (Pickup.GetComponent<OneItemHolder>().Item == null)
             {
-                Instantiate(Objects.GiveRandomPickup(), Pickup.transform.position, Quaternion.identity);
+                Instantiate(Objects.GiveRandomPickup(), Pickup.position, Quaternion.identity);
             }
             else
             {
-                Instantiate(Pickup.GetComponent<OneItemHolder>().Item, Pickup.transform.position, Quaternion.identity);
+                Instantiate(Pickup.GetComponent<OneItemHolder>().Item, Pickup.position, Quaternion.identity);
             }
         }
     }
 
     public void ItemsSpawn(Collider2D collision)
     {
-        foreach (GameObject Item in Items)
+        foreach (Transform Item in AllObjectsInRoom[5])
         {
             int WeaponIndex = 0;
             int i = 0;
@@ -160,11 +176,11 @@ public class Room : MonoBehaviour
             GameObject item;
             if (Item.GetComponent<OneItemHolder>().Item == null)
             {
-                item = Instantiate(Objects.GiveRandomItem(2, WeaponIndex), Item.transform.position, Quaternion.identity);
+                item = Instantiate(Objects.GiveRandomItem(2, WeaponIndex), Item.position, Quaternion.identity);
             }
             else
             {
-                item = Instantiate(Item.GetComponent<OneItemHolder>().Item, Item.transform.position, Quaternion.identity);
+                item = Instantiate(Item.GetComponent<OneItemHolder>().Item, Item.position, Quaternion.identity);
             }
             item.transform.parent = Item.transform.GetChild(0);
         }
@@ -172,34 +188,27 @@ public class Room : MonoBehaviour
 
     public void WeaponsSpawn()
     {
-        foreach (GameObject Weapon in Weapons)
+        foreach (Transform Weapon in AllObjectsInRoom[6])
         {
             GameObject Item;
             if (Weapon.GetComponent<OneItemHolder>().Item == null)
             {
-                Item = Instantiate(Objects.GiveRandomWeapon(), Weapon.transform.position, Quaternion.identity);
+                Item = Instantiate(Objects.GiveRandomWeapon(), Weapon.position, Quaternion.identity);
             }
             else
             {
-                Item = Instantiate(Weapon.GetComponent<OneItemHolder>().Item, Weapon.transform.position, Quaternion.identity);
+                Item = Instantiate(Weapon.GetComponent<OneItemHolder>().Item, Weapon.position, Quaternion.identity);
             }
             Item.transform.parent = Weapon.transform.GetChild(0);
         }
     }
 
-    public void WorkshopPlacesSpawn()
-    {
-        foreach (GameObject Place in WorkshopPlaceSpawnPoints)
-        {
-            Instantiate(Place.GetComponent<OneItemHolder>().Item, Place.transform.position, Quaternion.identity);
-        }
-    }
 
     public void LaddersPlacesSpawn()
     {
-        foreach (GameObject Place in LaddersPlaceSpawnPoints)
+        foreach (Transform Place in AllObjectsInRoom[7])
         {
-            Instantiate(Place.GetComponent<OneItemHolder>().Item, Place.transform.position, Quaternion.identity);
+            Instantiate(Place.GetComponent<OneItemHolder>().Item, Place.position, Quaternion.identity);
         }
     }
 
@@ -224,9 +233,9 @@ public class Room : MonoBehaviour
 
     private void DestroyDoors()
     {
-        foreach(GameObject DoorBlocker in DoorBlockers)
+        foreach(GameObject Door in Doors)
         {
-            DoorBlocker.SetActive(false);
+            Door.GetComponent<ArrayHolder>().Items[0].SetActive(false);
         }
         foreach (GameObject Door in Doors)
         {
@@ -238,19 +247,32 @@ public class Room : MonoBehaviour
     private IEnumerator SpawnReward()
     {
 
-        if(RewardActive)
+        if(ClearReward || ClearSpecialReward)
         {
-            Instantiate(RewardSpawnEffect, transform.position + new Vector3(0.5f, 0.5f, 0), Quaternion.identity);
+            Instantiate(RewardSpawnEffect, transform.position + new Vector3(0, 0, 0), Quaternion.identity);
             yield return new WaitForSeconds(0.5f);
-            if (SpecialReward)
+            if (ClearSpecialReward)
             {
-                //Instantiate(Objects.GiveItem, transform.position + new Vector3(0.5f, 0.5f, 0), Quaternion.identity);
+                WeaponSwitch weaponSwitch = GameObject.FindGameObjectWithTag("Player").transform.GetChild(0).GetComponent<WeaponSwitch>();
+                int WeaponIndex = 0;
+                int i = 0;
+                while (true && i < 500)
+                {
+                    WeaponIndex = Random.Range(0, weaponSwitch.WeaponCount);
+                    i++;
+
+                    if (weaponSwitch.UnlockedGuns[WeaponIndex])
+                    {
+                        break;
+                    }
+                }
+                Instantiate(Objects.GiveRandomItem(2, WeaponIndex), transform.position + new Vector3(0, -1, 0), Quaternion.identity);
             }
             else
             {
-                Instantiate(RoomClearRewards.Items[Random.Range(0, RoomClearRewards.Items.Length)], transform.position + new Vector3(0.5f, 0.5f, 0), Quaternion.identity);
+                Instantiate(RoomClearRewards.Items[Random.Range(0, RoomClearRewards.Items.Length)], transform.position + new Vector3(0, 0, 0), Quaternion.identity);
             }
-            RewardActive = false;
+            ClearReward = false;
         }
     }
 

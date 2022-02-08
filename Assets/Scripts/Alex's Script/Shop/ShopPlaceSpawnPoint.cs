@@ -10,21 +10,39 @@ public class ShopPlaceSpawnPoint : MonoBehaviour
     public bool IsItemPlace;
     public bool IsPickupsPlace;
 
+    [System.Obsolete]
     public void Spawn()
     {
         GameObject NewShopPlace = Instantiate(ShopPlace, transform.position, Quaternion.identity);
 
         if (IsWeaponPlace)
         {
-            NewShopPlace.GetComponent<ShopItemSpawn>().IsWeapon = true;
+            NewShopPlace.transform.GetChild(0).GetChild(0).GetComponent<ShopItemSpawn>().IsWeapon = true;
         }
         else if (IsItemPlace)
         {
-            NewShopPlace.GetComponent<ShopItemSpawn>().IsItem = true;
+            NewShopPlace.transform.GetChild(0).GetChild(0).GetComponent<ShopItemSpawn>().IsItem = true;
         }
         else if (IsPickupsPlace)
         {
-            NewShopPlace.GetComponent<ShopItemSpawn>().IsPickups = true;
+            NewShopPlace.transform.GetChild(0).GetChild(0).GetComponent<ShopItemSpawn>().IsPickups = true;
+        }
+        else
+        {
+            int index = Random.RandomRange(0, 2);
+
+            if(index == 0)
+            {
+                NewShopPlace.transform.GetChild(0).GetChild(0).GetComponent<ShopItemSpawn>().IsWeapon = true;
+            }
+            else if (index == 1)
+            {
+                NewShopPlace.transform.GetChild(0).GetChild(0).GetComponent<ShopItemSpawn>().IsItem = true;
+            }
+            else
+            {
+                NewShopPlace.transform.GetChild(0).GetChild(0).GetComponent<ShopItemSpawn>().IsPickups = true;
+            }
         }
     }
 }

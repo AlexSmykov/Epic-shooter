@@ -31,7 +31,7 @@ Transform:
   m_GameObject: {fileID: 6005641360176355040}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -1.1517248, y: 0.2891634, z: 0}
-  m_LocalScale: {x: 0.8, y: 0.8, z: 1}
+  m_LocalScale: {x: 1.5, y: 1.5, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -51,6 +51,7 @@ SpriteRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 0
+  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -75,7 +76,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 2
-  m_Sprite: {fileID: 21300000, guid: 6ce2db487b5344448ac062044f1ed0d1, type: 3}
+  m_Sprite: {fileID: 21300000, guid: b66eed5c95eea174780575c713544b3d, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -99,8 +100,8 @@ CapsuleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_Size: {x: 0.6, y: 0.28}
+  m_Offset: {x: 0.0026419796, y: 0.028324548}
+  m_Size: {x: 0.25482458, y: 0.22335348}
   m_Direction: 1
 --- !u!114 &6005641360176354844
 MonoBehaviour:
@@ -118,6 +119,9 @@ MonoBehaviour:
   PickupCount: 1
   PickupEffect: {fileID: 7698488682441119929, guid: c6dea7b37a392ee439f9b184c5533f4f,
     type: 3}
+  PickupIdleEffect: {fileID: 7698488682441119929, guid: 8fed8356dbf9885439a8cfc7b066a796,
+    type: 3}
+  PlaceForGun: {fileID: 0}
 --- !u!50 &3366110003111621342
 Rigidbody2D:
   serializedVersion: 4

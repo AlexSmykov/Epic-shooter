@@ -116,9 +116,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   PickupIndex: 5
-  PickupCount: 40
+  PickupCount: 20
   PickupEffect: {fileID: 7698488682441119929, guid: c6dea7b37a392ee439f9b184c5533f4f,
     type: 3}
+  PickupIdleEffect: {fileID: 7698488682441119929, guid: 8fed8356dbf9885439a8cfc7b066a796,
+    type: 3}
+  PlaceForGun: {fileID: 0}
 --- !u!50 &5564375628378788452
 Rigidbody2D:
   serializedVersion: 4

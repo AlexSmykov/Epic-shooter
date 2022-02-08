@@ -38,7 +38,6 @@ public class OpenMap : MonoBehaviour
                 {
                     if (FloorSpawner.GetComponent<FloorMaker>().RoomsChecked[j, i])
                     {
-                        Debug.Log("Ghj");
                         tile.GetComponent<SpriteRenderer>().color = new Color(200f / 255f, 200f / 255f, 200f / 255f, 200f / 255f);
                         string type = FloorSpawner.GetComponent<FloorMaker>().RoomTypeOnTheMap[j, i];
                         if (type == "Boss")

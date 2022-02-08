@@ -31,7 +31,7 @@ Transform:
   m_GameObject: {fileID: 3732681277366458324}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 3.8739874, y: -0.5937308, z: 0}
-  m_LocalScale: {x: 0.8, y: 0.8, z: 1}
+  m_LocalScale: {x: 1.2, y: 1.2, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -51,6 +51,7 @@ SpriteRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 0
+  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -99,8 +100,8 @@ CapsuleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_Size: {x: 1.04, y: 0.44}
+  m_Offset: {x: -0.008977578, y: 0.0014961027}
+  m_Size: {x: 0.54922736, y: 0.3023485}
   m_Direction: 1
 --- !u!114 &3732681277366458320
 MonoBehaviour:
@@ -118,6 +119,9 @@ MonoBehaviour:
   PickupCount: 1
   PickupEffect: {fileID: 7698488682441119929, guid: c6dea7b37a392ee439f9b184c5533f4f,
     type: 3}
+  PickupIdleEffect: {fileID: 7698488682441119929, guid: 8fed8356dbf9885439a8cfc7b066a796,
+    type: 3}
+  PlaceForGun: {fileID: 0}
 --- !u!50 &2723524161257799420
 Rigidbody2D:
   serializedVersion: 4

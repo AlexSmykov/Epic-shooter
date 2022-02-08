@@ -99,6 +99,14 @@ public class Player : MonoBehaviour
 
         _Direction.x = Input.GetAxisRaw("Horizontal");
         _Direction.y = Input.GetAxisRaw("Vertical");
+        if(_Direction.x != 0 || _Direction.y != 0)
+        {
+            _Animator.SetBool("IsRunning", true);
+        }
+        else
+        {
+            _Animator.SetBool("IsRunning", false);
+        }
 
         LookAtCursor();
         if(Health <= 0)

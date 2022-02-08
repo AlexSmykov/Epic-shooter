@@ -51,6 +51,7 @@ SpriteRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 0
+  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -102,6 +103,9 @@ MonoBehaviour:
   PickupCount: 3
   PickupEffect: {fileID: 7698488682441119929, guid: c6dea7b37a392ee439f9b184c5533f4f,
     type: 3}
+  PickupIdleEffect: {fileID: 7698488682441119929, guid: 8fed8356dbf9885439a8cfc7b066a796,
+    type: 3}
+  PlaceForGun: {fileID: 0}
 --- !u!50 &-7894219526626438039
 Rigidbody2D:
   serializedVersion: 4
@@ -170,6 +174,6 @@ CapsuleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_Size: {x: 0.76, y: 0.6}
+  m_Offset: {x: 0.005762428, y: 0.0038417429}
+  m_Size: {x: 0.6716415, y: 0.6754832}
   m_Direction: 0

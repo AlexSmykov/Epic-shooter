@@ -14,12 +14,102 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   SimpleSelectedItems:
     m_Keys:
+    - Assets/Animation/Door.controller
     - Assets/OpenMap.cs
-    - Assets/Scenes/Main menu.unity
-    - Assets/Sprites/Alex's/Map/EmptyTile.psd
-    - Assets/Sprites/Alex's/Map/EmptyTile.psd.meta
+    - Assets/Prefabs/Alex's/Enemies/BossSlime.prefab
+    - Assets/Prefabs/Alex's/Enemies/BossSlime.prefab.meta
+    - Assets/Prefabs/Alex's/Map/Map.prefab
+    - Assets/Prefabs/Alex's/RoomChangeTrigger.prefab
+    - Assets/Prefabs/Alex's/RoomChangeTrigger.prefab.meta
+    - Assets/Prefabs/Alex's/RoomObjects/BlackBG.prefab
+    - Assets/Prefabs/Alex's/RoomObjects/BlackBG.prefab.meta
+    - Assets/Prefabs/Alex's/RoomObjects/ChestSpawnPoint.prefab
+    - Assets/Prefabs/Alex's/RoomObjects/ChestSpawnPoint.prefab.meta
+    - Assets/Prefabs/Alex's/RoomObjects/Door.prefab
+    - Assets/Prefabs/Alex's/RoomObjects/DoorLocker.prefab
+    - Assets/Prefabs/Alex's/RoomObjects/DoorLocker.prefab.meta
+    - Assets/Prefabs/Alex's/RoomObjects/Doors.prefab
+    - Assets/Prefabs/Alex's/RoomObjects/Doors.prefab.meta
+    - Assets/Prefabs/Alex's/RoomObjects/EmptyRoom 0.prefab
+    - Assets/Prefabs/Alex's/RoomObjects/EmptyRoom 0.prefab.meta
+    - Assets/Prefabs/Alex's/RoomObjects/EnemySpawnPoint.prefab
+    - Assets/Prefabs/Alex's/RoomObjects/EnemySpawnPoint.prefab.meta
+    - Assets/Prefabs/Alex's/RoomObjects/Ground.prefab
+    - Assets/Prefabs/Alex's/RoomObjects/Ground.prefab.meta
+    - Assets/Prefabs/Alex's/RoomObjects/ItemSpawnpoint.prefab
+    - Assets/Prefabs/Alex's/RoomObjects/ItemSpawnpoint.prefab.meta
+    - Assets/Prefabs/Alex's/RoomObjects/LadderSpawnPoint.prefab
+    - Assets/Prefabs/Alex's/RoomObjects/LadderSpawnPoint.prefab.meta
+    - Assets/Prefabs/Alex's/RoomObjects/PickupSpawnpoint.prefab
+    - Assets/Prefabs/Alex's/RoomObjects/PickupSpawnpoint.prefab.meta
+    - Assets/Prefabs/Alex's/RoomObjects/RoomObjects.prefab
+    - Assets/Prefabs/Alex's/RoomObjects/RoomObjects.prefab.meta
+    - Assets/Prefabs/Alex's/RoomObjects/ShopPlaceSpawnPoint.prefab
+    - Assets/Prefabs/Alex's/RoomObjects/ShopPlaceSpawnPoint.prefab.meta
+    - Assets/Prefabs/Alex's/RoomObjects/WallColiders.prefab
+    - Assets/Prefabs/Alex's/RoomObjects/WallColiders.prefab.meta
+    - Assets/Prefabs/Alex's/RoomObjects/Walls.prefab
+    - Assets/Prefabs/Alex's/RoomObjects/Walls.prefab.meta
+    - Assets/Prefabs/Alex's/RoomObjects/WeaponSpawnpoint.prefab
+    - Assets/Prefabs/Alex's/RoomObjects/WeaponSpawnpoint.prefab.meta
+    - Assets/Prefabs/Alex's/RoomObjects/WorkshopPlaceSpawnpoint.prefab
+    - Assets/Prefabs/Alex's/RoomObjects/WorkshopPlaceSpawnpoint.prefab.meta
+    - Assets/Prefabs/Alex's/Rooms/BossRooms/BossRoom 0.prefab
+    - Assets/Prefabs/Alex's/Rooms/BossRooms/BossRoom 1.prefab
+    - Assets/Prefabs/Alex's/Rooms/BossRooms/BossRoom 1.prefab.meta
+    - Assets/Prefabs/Alex's/Rooms/ChestRooms/ChestRoom 0.prefab
+    - Assets/Prefabs/Alex's/Rooms/DefaultRooms/DefaultRoom 0.prefab
+    - Assets/Prefabs/Alex's/Rooms/ShopRooms/ShopRoom 0.prefab
+    - Assets/Prefabs/Alex's/Rooms/StartRooms/StartRoom 0.prefab
+    - Assets/Prefabs/Alex's/Rooms/SuperBossRooms/SuperBossRoom 0.prefab
+    - Assets/Prefabs/Alex's/Rooms/WorkshopRooms/WorkshopRoom 0.prefab
+    - Assets/Scenes/Alex's scene.unity
+    - Assets/Scripts/Alex's Script/Enemies/Enemy.cs
+    - Assets/Scripts/Alex's Script/Floors/FloorMaker.cs
+    - Assets/Scripts/Alex's Script/Rooms/Room.cs
+    - Assets/SpriteRandomer.cs
+    - Assets/SpriteRandomer.cs.meta
+    - Assets/Sprites/Alex's/MaterialTextures.meta
+    - Assets/Sprites/Alex's/MaterialTextures/Ground_1.png
+    - Assets/Sprites/Alex's/MaterialTextures/Ground_1.png.meta
+    - Assets/Sprites/Alex's/MaterialTextures/Ground_2.png
+    - Assets/Sprites/Alex's/MaterialTextures/Ground_2.png.meta
+    - Assets/Sprites/Alex's/MaterialTextures/Ground_3.png
+    - Assets/Sprites/Alex's/MaterialTextures/Ground_3.png.meta
+    - Assets/Sprites/Alex's/MaterialTextures/Ground_4.png
+    - Assets/Sprites/Alex's/MaterialTextures/Ground_4.png.meta
+    - Assets/Sprites/Alex's/MaterialTextures/Ground_5.png
+    - Assets/Sprites/Alex's/MaterialTextures/Ground_5.png.meta
+    - Assets/Sprites/Alex's/Pickups/Bullets/BazookaBullets.png.meta
+    - Assets/Sprites/Alex's/Pickups/Bullets/MachinegunBullets.png.meta
+    - Assets/Sprites/Alex's/Pickups/Bullets/PistolBullets.png.meta
+    - Assets/Sprites/Alex's/Pickups/Bullets/PlasmaBullets.png.meta
+    - Assets/Sprites/Alex's/Pickups/Bullets/RifleBullets.png.meta
+    - Assets/Sprites/Alex's/Pickups/Bullets/ShotgunBullets.png.meta
+    - Assets/Sprites/Rogue Lite Asset Pack/Tilemap/Door Anim/door anim_Animation
+      1_13.png
+    - Assets/Sprites/Rogue Lite Asset Pack/Tilemap/Door Anim/door anim_Animation
+      1_14.png
+    - Assets/Sprites/Rogue Lite Asset Pack/Tilemap/Door Anim/door anim_Animation
+      1_15.png
+    - Assets/Sprites/Rogue Lite Asset Pack/Tilemap/Door Anim/door anim_Animation
+      1_16.png
+    - Assets/Sprites/Rogue Lite Asset Pack/Tilemap/Door Anim/door anim_Animation
+      1_17.png
+    - Assets/Sprites/Rogue Lite Asset Pack/Tilemap/Door Anim/door anim_Animation
+      1_18.png
+    - Assets/Sprites/Rogue Lite Asset Pack/Tilemap/Door Anim/door anim_Animation
+      1_19.png
+    - Assets/Sprites/Rogue Lite Asset Pack/Tilemap/Door Anim/door anim_Animation
+      1_20.png
+    - Assets/Sprites/Rogue Lite Asset Pack/Tilemap/Door Anim/door anim_Animation
+      1_21.png
+    - Assets/Sprites/Rogue Lite Asset Pack/Tilemap/Door Anim/door anim_Animation
+      1_22.png
+    - Assets/Sprites/Rogue Lite Asset Pack/Tilemap/Door Anim/door anim_Animation
+      1_23.png
     - 
-    m_Values: 0000000000
+    m_Values: 000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
   RevisionSummary: 
   ChangesSearchValue: 
   SelectedHistoryRevision: 

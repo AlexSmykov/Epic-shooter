@@ -67,6 +67,7 @@
      <Compile Include="Assets\Scripts\ClonePlayer.cs" />
      <Compile Include="Assets\Scripts\Alex&apos;s Script\Enemies\Enemy.cs" />
      <Compile Include="Assets\Scripts\Alex&apos;s Script\Floors\FloorMaker.cs" />
+     <Compile Include="Assets\SpriteRandomer.cs" />
      <Compile Include="Assets\Scripts\Alex&apos;s Script\Items\ItemInfo.cs" />
      <Compile Include="Assets\Save.cs" />
      <Compile Include="Assets\Scripts\Alex&apos;s Script\Menu\CongatulationMenu.cs" />

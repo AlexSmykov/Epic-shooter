@@ -30,6 +30,10 @@ public class Enemy : MonoBehaviour
 
     private void Start()
     {
+        if(Target == null)
+        {
+            Target = GameObject.FindGameObjectWithTag("Player").transform;
+        }
         Health = StartHealth;
         Animator = GetComponent<Animator>();
         Room = GetComponentInParent<Room>();
@@ -50,7 +54,10 @@ public class Enemy : MonoBehaviour
             }
             Instantiate(DeadEffect, transform.position, Quaternion.identity);
             GameObject blood = Instantiate(BloodByDeath, transform.position, Quaternion.identity);
-            Room.EnemiesLeft.Remove(gameObject);
+            if(Room != null)
+            {
+                Room.EnemiesLeft.Remove(gameObject);
+            }
             Destroy(gameObject);
         }
     }
