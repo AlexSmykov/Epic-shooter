@@ -51,6 +51,7 @@ SpriteRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 0
+  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -146,6 +147,7 @@ SpriteRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 0
+  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -194,19 +196,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   StartHealth: 20
+  Health: 0
   Damage: 8
   ReloadTime: 0.5
   CurrentReloadTime: 0
   Room: {fileID: 0}
   Animator: {fileID: 0}
   Target: {fileID: 0}
-  FloatingDamage: {fileID: 2191169466657189297, guid: cbf768e72f6e79449a48025e30fe7af5,
+  FloatingDamage: {fileID: 2191169466657189297, guid: 6046ddc1b2a06a04b88df20b9d1c83d5,
     type: 3}
   BloodEffect: {fileID: 2260435715245688863, guid: fc55f65d2a579df40bb9cd3be0659c55,
     type: 3}
   DeadEffect: {fileID: 2260435715245688863, guid: f1536ed630eb0674fbd72c9197964fad,
-    type: 3}
-  BloodByShoot: {fileID: 6611215454564726227, guid: 7186302bb8f939242bf6cb18085473bc,
     type: 3}
   BloodByDeath: {fileID: 6611215454564726227, guid: 74af77eab947bc44a98b4edf86a42add,
     type: 3}
@@ -214,6 +215,7 @@ MonoBehaviour:
   HpBarFill: {fileID: 913881756679627289}
   IsBoss: 0
   SpawnEnemyAfterDie: 0
+  CountEnemySpawnAfterDie: 0
 --- !u!114 &7987431739675758610
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -363,6 +365,7 @@ SpriteRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 0
+  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -480,6 +483,7 @@ MonoBehaviour:
   m_FallbackScreenDPI: 96
   m_DefaultSpriteDPI: 96
   m_DynamicPixelsPerUnit: 1
+  m_PresetInfoIsWorld: 0
 --- !u!114 &1372028444299820438
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -548,6 +552,7 @@ SpriteRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 0
+  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:

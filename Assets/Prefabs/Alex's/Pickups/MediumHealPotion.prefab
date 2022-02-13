@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 5564375628378788452}
   - component: {fileID: 8869863890965961187}
   - component: {fileID: 8041298392342180419}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: MediumHealPotion
   m_TagString: Untagged
   m_Icon: {fileID: 0}

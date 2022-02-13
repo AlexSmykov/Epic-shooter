@@ -6,6 +6,7 @@ using UnityEngine.UI;
 public class FloatingDamage : MonoBehaviour
 {
     public GameObject FloatingText;
+    public bool IsPlayer;
     [HideInInspector] public float Damage;
     private TextMesh textMesh;
 
@@ -13,9 +14,17 @@ public class FloatingDamage : MonoBehaviour
     {
         textMesh = GetComponent<TextMesh>();
         textMesh.text = Math.Round(Damage).ToString();
-        if(Damage > 0)
+
+        if (IsPlayer)
         {
-            textMesh.color = Color.green;
+            if (Damage > 0)
+            {
+                textMesh.color = Color.green;
+            }
+            else
+            {
+                textMesh.color = Color.red;
+            }
         }
     }
 

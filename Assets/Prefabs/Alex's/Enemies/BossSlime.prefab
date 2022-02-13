@@ -204,13 +204,11 @@ MonoBehaviour:
   Room: {fileID: 0}
   Animator: {fileID: 0}
   Target: {fileID: 0}
-  FloatingDamage: {fileID: 2191169466657189297, guid: cbf768e72f6e79449a48025e30fe7af5,
+  FloatingDamage: {fileID: 2191169466657189297, guid: 6046ddc1b2a06a04b88df20b9d1c83d5,
     type: 3}
   BloodEffect: {fileID: 2260435715245688863, guid: fc55f65d2a579df40bb9cd3be0659c55,
     type: 3}
   DeadEffect: {fileID: 2260435715245688863, guid: f1536ed630eb0674fbd72c9197964fad,
-    type: 3}
-  BloodByShoot: {fileID: 6611215454564726227, guid: 7186302bb8f939242bf6cb18085473bc,
     type: 3}
   BloodByDeath: {fileID: 6611215454564726227, guid: 74af77eab947bc44a98b4edf86a42add,
     type: 3}

@@ -48,7 +48,6 @@
   </PropertyGroup>
   <ItemGroup>
      <Compile Include="Assets\Scripts\Alex&apos;s Script\Items\ItemEffects.cs" />
-     <Compile Include="Assets\DoorSpriteChanger.cs" />
      <Compile Include="Assets\Scripts\Alex&apos;s Script\Guns\WeaponSwitch.cs" />
      <Compile Include="Assets\Scripts\Alex&apos;s Script\Enemies\AttackByAnimation.cs" />
      <Compile Include="Assets\Scripts\Alex&apos;s Script\Rooms\ChangeRoom.cs" />

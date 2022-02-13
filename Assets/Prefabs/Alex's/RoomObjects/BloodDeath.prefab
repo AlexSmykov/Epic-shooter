@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 373407476833023620}
   - component: {fileID: 579397424110672796}
   - component: {fileID: -4381697531531071914}
+  - component: {fileID: 3943850237970665551}
   m_Layer: 0
   m_Name: BloodDeath
   m_TagString: Untagged
@@ -71,7 +72,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: -9
   m_Sprite: {fileID: 21300000, guid: 5ce2b74a971a2b14fada913926f35f0c, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -95,3 +96,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: be8516f41a7c3cd4bb89ee69dfe5a248, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &3943850237970665551
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6611215454564726227}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fa93ff2545282974d811ab029fd40953, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Variables:
+  - {fileID: 21300000, guid: 5ce2b74a971a2b14fada913926f35f0c, type: 3}
+  - {fileID: 21300000, guid: 708a80a4525c5554b8c228d8d6cd2c64, type: 3}
+  - {fileID: 21300000, guid: 419c830d6a3cb554e8893f15df0a92a4, type: 3}
+  - {fileID: 21300000, guid: d3dd035536ce34f4189ce73656dd0d35, type: 3}
+  - {fileID: 21300000, guid: c65856e0a5d3bf74e8017b524bcfbf64, type: 3}
