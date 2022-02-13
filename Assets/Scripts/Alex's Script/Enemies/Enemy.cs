@@ -18,7 +18,6 @@ public class Enemy : MonoBehaviour
     public GameObject FloatingDamage;
     public GameObject BloodEffect;
     public GameObject DeadEffect;
-    public GameObject BloodByShoot;
     public GameObject BloodByDeath;
     public GameObject HpBar;
     public GameObject HpBarFill;
@@ -54,6 +53,10 @@ public class Enemy : MonoBehaviour
             }
             Instantiate(DeadEffect, transform.position, Quaternion.identity);
             GameObject blood = Instantiate(BloodByDeath, transform.position, Quaternion.identity);
+            if(IsBoss)
+            {
+                blood.transform.localScale = new Vector3(2, 2, 1);
+            }
             if(Room != null)
             {
                 Room.EnemiesLeft.Remove(gameObject);
@@ -81,7 +84,6 @@ public class Enemy : MonoBehaviour
         GameObject FloatDmg = Instantiate(FloatingDamage, new Vector2(transform.position.x, transform.position.y + 0.5f) + Randomizer, Quaternion.identity);
         FloatDmg.GetComponentInChildren<FloatingDamage>().Damage = Damage;
         Instantiate(BloodEffect, transform.position, Quaternion.identity);
-        GameObject blood = Instantiate(BloodByShoot, transform.position, Quaternion.identity);
         if (IsBoss)
         {
             HpBarFill.GetComponent<Transform>().localScale = new Vector2(Health / StartHealth, 1);

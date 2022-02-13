@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 622478499734382638}
   - component: {fileID: 5564375628378788452}
   - component: {fileID: 8869863890965961187}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: PlasmaBullets
   m_TagString: Untagged
   m_Icon: {fileID: 0}

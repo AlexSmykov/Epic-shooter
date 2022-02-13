@@ -30,7 +30,7 @@ TagManager:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - NotBulletTrigger
   - Water
   - UI
   - 
