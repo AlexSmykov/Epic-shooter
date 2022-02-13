@@ -12,6 +12,9 @@ public class Gun : MonoBehaviour
 	public Transform ShotPoint;
 	private Text BulletText;
 	private GameObject ReloadBar;
+	private AudioSource audioSource;
+	public AudioClip ReloadSound;
+	public AudioClip ShotSound;
 
 	public float StartBulletReloadTime;
 	private float BulletReloadTime;
@@ -44,6 +47,7 @@ public class Gun : MonoBehaviour
     {
 		BulletText = GameObject.Find("WeaponBulletText").GetComponent<Text>();
 		ReloadBar = GameObject.FindGameObjectWithTag("ReloadBar");
+		audioSource = GetComponent<AudioSource>();
 		BulletTextUpdate();
 	}
 
@@ -93,6 +97,7 @@ public class Gun : MonoBehaviour
 			}
 			BulletTextUpdate();
 			GiveBullet = false;
+			audioSource.PlayOneShot(ReloadSound);
 		}
 
 		if ((CurrentClipSize <= 0  || (Input.GetButton("r") && CurrentClipSize != ClipSize + ClipSizeBonusLevel - 1)) && ClipRecoilTime <= 0 && BulletsCount > 0)
@@ -100,30 +105,27 @@ public class Gun : MonoBehaviour
 			ReloadGun();
 		}
 
-		if(BulletReloadTime <= 0 && ClipRecoilTime <= 0 && CurrentClipSize > 0)
-        {
-			if (Input.GetMouseButton(0))
+		if(Input.GetMouseButton(0) && BulletReloadTime <= 0 && ClipRecoilTime <= 0 && CurrentClipSize > 0)
+		{
+			for (int i = 0; i < MultiShotBonusLevel && CurrentClipSize > 0; i++)
 			{
-				for(int i = 0; i < MultiShotBonusLevel && CurrentClipSize > 0; i++)
-				{
-					Quaternion BulletRotate = Quaternion.Euler(0f, 0f, rotZ + Offset + Random.Range(-Accuracy, Accuracy));
-					GameObject NewBullet = Instantiate(Bullet, ShotPoint.position, BulletRotate);
-					NewBullet.GetComponent<Bullet>().Damage = Damage * (float)(1 + Mathf.Log(Mathf.Pow((float)((DamageBonusLevel - 1) * 0.75), 1.2f) / 5 + 1, 2));
-					NewBullet.GetComponent<Bullet>().Speed = BulletSpeed * (float)(1 + Mathf.Pow(BulletSpeedBonusLevel - 1, 0.9f) / 6);
-					NewBullet.GetComponent<Bullet>().PenetrationCount = PenetrationBonusLevel;
-				}
-
-				CurrentClipSize -= ShotBulletPenalty;
-				BulletReloadTime = StartBulletReloadTime * (float)(1 - Mathf.Pow(FireRateBonusLevel - 1, 0.75f) / 12);
-
-				if (CurrentClipSize <= 0)
-                {
-					CurrentClipSize = 0;
-				}
-
-				BulletTextUpdate();
-
+				Quaternion BulletRotate = Quaternion.Euler(0f, 0f, rotZ + Offset + Random.Range(-Accuracy, Accuracy));
+				GameObject NewBullet = Instantiate(Bullet, ShotPoint.position, BulletRotate);
+				NewBullet.GetComponent<Bullet>().Damage = Damage * (float)(1 + Mathf.Log(Mathf.Pow((float)((DamageBonusLevel - 1) * 0.75), 1.2f) / 5 + 1, 2));
+				NewBullet.GetComponent<Bullet>().Speed = BulletSpeed * (float)(1 + Mathf.Pow(BulletSpeedBonusLevel - 1, 0.9f) / 6);
+				NewBullet.GetComponent<Bullet>().PenetrationCount = PenetrationBonusLevel;
 			}
+
+			audioSource.PlayOneShot(ShotSound);
+			CurrentClipSize -= ShotBulletPenalty;
+			BulletReloadTime = StartBulletReloadTime * (float)(1 - Mathf.Pow(FireRateBonusLevel - 1, 0.75f) / 12);
+
+			if (CurrentClipSize <= 0)
+			{
+				CurrentClipSize = 0;
+			}
+
+			BulletTextUpdate();
 		}
         else
         {

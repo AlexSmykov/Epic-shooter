@@ -46,7 +46,7 @@ public class FloorMaker : MonoBehaviour
         if(CurrentFloor <= MaxFloor)
         {
             GameObject.FindGameObjectWithTag("CurrentFloor").GetComponent<Text>().text = "Current floor: " + CurrentFloor.ToString() + "/" + MaxFloor.ToString();
-            DefaultRoomCount = UnityEngine.Random.Range(5 + CurrentFloor, 8 + CurrentFloor * 2);
+            DefaultRoomCount = UnityEngine.Random.Range(5 + CurrentFloor, (int)(8 + CurrentFloor * 1.6));
             for (int i = 0; i < DefaultRoomCount; i++)
             {
                 PlaceOneRoomFromArray(AllDefaultRooms.Items, "Default");
@@ -135,43 +135,6 @@ public class FloorMaker : MonoBehaviour
         }
     }
 
-    private void PlaceDoors()
-    {
-        for (int x = 0; x < RoomsOnTheMap.GetLength(0); x++)
-        {
-            for (int y = 0; y < RoomsOnTheMap.GetLength(0); y++)
-            {
-                if (RoomsOnTheMap[x, y])
-                {
-                    if (RoomsOnTheMap[x + 1, y])
-                    {
-                        RoomsMap[x, y].transform.GetChild(0).GetComponent<Room>().DoorRight.GetComponent<ArrayHolder>().Items[1].SetActive(false);
-                        RoomsMap[x + 1, y].transform.GetChild(0).GetComponent<Room>().DoorLeft.GetComponent<ArrayHolder>().Items[1].SetActive(false);
-                    }
-
-                    if (RoomsOnTheMap[x - 1, y])
-                    {
-                        RoomsMap[x, y].transform.GetChild(0).GetComponent<Room>().DoorLeft.GetComponent<ArrayHolder>().Items[1].SetActive(false);
-                        RoomsMap[x - 1, y].transform.GetChild(0).GetComponent<Room>().DoorRight.GetComponent<ArrayHolder>().Items[1].SetActive(false);
-                    }
-
-                    if (RoomsOnTheMap[x, y + 1])
-                    {
-                        RoomsMap[x, y].transform.GetChild(0).GetComponent<Room>().DoorUp.GetComponent<ArrayHolder>().Items[1].SetActive(false);
-                        RoomsMap[x, y + 1].transform.GetChild(0).GetComponent<Room>().DoorDown.GetComponent<ArrayHolder>().Items[1].SetActive(false);
-                    }
-
-                    if (RoomsOnTheMap[x, y - 1])
-                    {
-                        RoomsMap[x, y].transform.GetChild(0).GetComponent<Room>().DoorDown.GetComponent<ArrayHolder>().Items[1].SetActive(false);
-                        RoomsMap[x, y - 1].transform.GetChild(0).GetComponent<Room>().DoorUp.GetComponent<ArrayHolder>().Items[1].SetActive(false);
-                    }
-                }
-            }
-        }
-    }
-
-
     private Vector2Int VacantPlacesFind()
     {
         HashSet<Vector2Int> VacantPlaces = new HashSet<Vector2Int>();
@@ -245,5 +208,42 @@ public class FloorMaker : MonoBehaviour
 
         return Can;
     }
+    private void PlaceDoors()
+    {
+        for (int x = 0; x < RoomsOnTheMap.GetLength(0); x++)
+        {
+            for (int y = 0; y < RoomsOnTheMap.GetLength(0); y++)
+            {
+                if (RoomsOnTheMap[x, y])
+                {
+                    if (RoomsOnTheMap[x + 1, y])
+                    {
+                        RoomsMap[x, y].transform.GetChild(0).GetComponent<Room>().DoorRight.GetComponent<SpriteRenderer>().sortingOrder = -3;
+                        RoomsMap[x + 1, y].transform.GetChild(0).GetComponent<Room>().DoorLeft.GetComponent<SpriteRenderer>().sortingOrder = -3;
+                    }
+
+                    if (RoomsOnTheMap[x - 1, y])
+                    {
+                        RoomsMap[x, y].transform.GetChild(0).GetComponent<Room>().DoorLeft.GetComponent<SpriteRenderer>().sortingOrder = -3;
+                        RoomsMap[x - 1, y].transform.GetChild(0).GetComponent<Room>().DoorRight.GetComponent<SpriteRenderer>().sortingOrder = -3;
+                    }
+
+                    if (RoomsOnTheMap[x, y + 1])
+                    {
+                        RoomsMap[x, y].transform.GetChild(0).GetComponent<Room>().DoorUp.GetComponent<SpriteRenderer>().sortingOrder = -3;
+                        RoomsMap[x, y + 1].transform.GetChild(0).GetComponent<Room>().DoorDown.GetComponent<SpriteRenderer>().sortingOrder = -3;
+                    }
+
+                    if (RoomsOnTheMap[x, y - 1])
+                    {
+                        RoomsMap[x, y].transform.GetChild(0).GetComponent<Room>().DoorDown.GetComponent<SpriteRenderer>().sortingOrder = -3;
+                        RoomsMap[x, y - 1].transform.GetChild(0).GetComponent<Room>().DoorUp.GetComponent<SpriteRenderer>().sortingOrder = -3;
+                    }
+                }
+            }
+        }
+    }
+
+
 
 }

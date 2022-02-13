@@ -235,11 +235,12 @@ public class Room : MonoBehaviour
     {
         foreach(GameObject Door in Doors)
         {
-            Door.GetComponent<ArrayHolder>().Items[0].SetActive(false);
-        }
-        foreach (GameObject Door in Doors)
-        {
-            Door.GetComponent<Animator>().Play("DoorOpen");
+            Debug.Log(Door.GetComponent<SpriteRenderer>().sortingOrder);
+            if(Door.GetComponent<SpriteRenderer>().sortingOrder == -3)
+            {
+                Door.GetComponent<OneItemHolder>().Item.SetActive(false);
+                Door.GetComponent<Animator>().Play("DoorOpen");
+            }
         }
         DoorDestroyed = true;
     }
