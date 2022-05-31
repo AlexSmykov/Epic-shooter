@@ -1,0 +1,3 @@
+ItemChest;AvailableToUse;false;None
+ResourcesChest;AvailableToUse;false;None
+WeaponChest;AvailableToUse;false;None

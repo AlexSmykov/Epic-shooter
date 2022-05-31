@@ -1,0 +1,67 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!181963792 &2655988077585873504
+Preset:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: Machinegun
+  m_TargetType:
+    m_NativeTypeID: 114
+    m_ManagedTypePPtr: {fileID: 11500000, guid: 5a6e5987b00576845835c700d1d2c3f0,
+      type: 3}
+    m_ManagedTypeFallback: 
+  m_Properties:
+  - target: {fileID: 0}
+    propertyPath: m_Enabled
+    value: 1
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: m_EditorHideFlags
+    value: 0
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: m_EditorClassIdentifier
+    value: 
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: _Speed
+    value: 14
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: _LifeTime
+    value: 2
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: _Damage
+    value: 6
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: _PenetrationCount
+    value: 1
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: _DestroyEffect
+    value: 
+    objectReference: {fileID: 2260435715245688863, guid: 44f5d89dfad36824ca6385af82ffc553,
+      type: 3}
+  - target: {fileID: 0}
+    propertyPath: _ShootEffect
+    value: 
+    objectReference: {fileID: 7698488682441119929, guid: f53225db31d3fc449ad8cb50ea18b4e3,
+      type: 3}
+  - target: {fileID: 0}
+    propertyPath: _BangAfterDestroy
+    value: 0
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: _BangRadius
+    value: 1
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: _Bang
+    value: 
+    objectReference: {fileID: 184959693535010603, guid: dfa62e3d04e689f42a71576f7050cbf7,
+      type: 3}
+  m_ExcludedProperties: []

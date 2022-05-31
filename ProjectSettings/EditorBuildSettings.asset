@@ -14,4 +14,6 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Congratulations.unity
     guid: fff25c077d81bbf47a5f9e69cfc2ecb2
-  m_configObjects: {}
+  m_configObjects:
+    com.unity.xr.management.loader_settings: {fileID: 11400000, guid: 09c498336818ce24ca6317b58d5685fe,
+      type: 2}

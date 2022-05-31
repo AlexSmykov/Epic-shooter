@@ -1,0 +1,42 @@
+Pistol damage;AvailableToUse;false;Pistol
+Pistol fire rate;AvailableToUse;false;Pistol
+Pistol recoil;AvailableToUse;false;Pistol
+Pistol bullet speed;AvailableToUse;false;Pistol
+Pistol clip;AvailableToUse;false;Pistol
+Pistol penetration;AvailableToResearch;false;Pistol
+Pistol multishot;AvailableToResearch;false;Pistol
+Shotgun damage;AvailableToUse;false;Shotgun
+Shotgun fire rate;AvailableToUse;false;Shotgun
+Shotgun recoil;AvailableToUse;false;Shotgun
+Shotgun bullet speed;AvailableToUse;false;Shotgun
+Shotgun clip;AvailableToUse;false;Shotgun
+Shotgun penetration;AvailableToResearch;false;Shotgun
+Shotgun multishot;AvailableToResearch;false;Shotgun
+Machinegun damage;AvailableToUse;false;Machinegun
+Machinegun fire rate;AvailableToUse;false;Machinegun
+Machinegun recoil;AvailableToUse;false;Machinegun
+Machinegun bullet speed;AvailableToUse;false;Machinegun
+Machinegun clip;AvailableToUse;false;Machinegun
+Machinegun penetration;AvailableToResearch;false;Machinegun
+Machinegun multishot;AvailableToResearch;false;Machinegun
+Rifle damage;AvailableToUse;false;Rifle
+Rifle fire rate;AvailableToUse;false;Rifle
+Rifle recoil;AvailableToUse;false;Rifle
+Rifle bullet speed;AvailableToUse;false;Rifle
+Rifle clip;AvailableToUse;false;Rifle
+Rifle penetration;AvailableToResearch;false;Rifle
+Rifle multishot;AvailableToResearch;false;Rifle
+Plasmagun damage;AvailableToUse;false;Plasmagun
+Plasmagun fire rate;AvailableToUse;false;Plasmagun
+Plasmagun recoil;AvailableToUse;false;Plasmagun
+Plasmagun bullet speed;AvailableToUse;false;Plasmagun
+Plasmagun clip;AvailableToUse;false;Plasmagun
+Plasmagun penetration;AvailableToResearch;false;Plasmagun
+Plasmagun multishot;AvailableToResearch;false;Plasmagun
+Bazooka damage;AvailableToUse;false;Bazooka
+Bazooka fire rate;AvailableToUse;false;Bazooka
+Bazooka recoil;AvailableToUse;false;Bazooka
+Bazooka bullet speed;AvailableToUse;false;Bazooka
+Bazooka clip;AvailableToUse;false;Bazooka
+Bazooka penetration;AvailableToResearch;false;Bazooka
+Bazooka multishot;AvailableToResearch;false;Bazooka

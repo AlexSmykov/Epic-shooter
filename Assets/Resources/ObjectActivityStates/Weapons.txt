@@ -1,0 +1,6 @@
+Pistol;LockedForUse;true;None
+Shotgun;LockedForUse;true;None
+Machinegun;LockedForUse;true;None
+Rifle;LockedForUse;true;None
+Plasmagun;LockedForUse;true;None
+Bazooka;LockedForUse;true;None
