@@ -5,16 +5,16 @@ m_ProjectFiles:
     m_ContentTrackingEnabled: 1
     m_ModificationDate:
       serializedVersion: 2
-      ticks: 637803386247694567
-    m_Hash: 1946105723
+      ticks: 637823356497523662
+    m_Hash: 2735873782
   m_LockFileStatus:
     m_FilePath: C:/Users/User/Epic Shooter/Packages/packages-lock.json
     m_PathExists: 1
     m_ContentTrackingEnabled: 1
     m_ModificationDate:
       serializedVersion: 2
-      ticks: 637803386247859635
-    m_Hash: 2269860117
+      ticks: 637823356497603686
+    m_Hash: 1319023163
 m_EmbeddedPackageManifests:
   m_ManifestsStatus: {}
 m_PackageAssets:
@@ -106,6 +106,7 @@ m_PackageAssets:
         - 5.0.9
         - 5.0.10
         - 5.1.0
+        - 5.1.1
         - 6.0.0-pre.1
         - 6.0.0-pre.2
         - 6.0.1
@@ -119,12 +120,14 @@ m_PackageAssets:
         - 7.0.1
         - 7.0.2
         - 7.0.3
+        - 7.0.4
         - 8.0.0-pre.3
         - 8.0.0-pre.4
         - 8.0.0
         compatible:
         - 5.0.10
         - 5.1.0
+        - 5.1.1
         verified: 5.0.10
       dependencies:
       - name: com.unity.2d.common
@@ -326,6 +329,7 @@ m_PackageAssets:
         - 6.0.0
         - 6.0.1
         - 6.0.2
+        - 6.0.3
         - 7.0.0-pre.3
         - 7.0.0-pre.4
         - 7.0.0
@@ -523,6 +527,7 @@ m_PackageAssets:
         - 7.0.0
         - 7.0.2
         - 7.0.3
+        - 7.0.4
         - 8.0.0-pre.4
         - 8.0.0-pre.5
         - 8.0.0
@@ -692,11 +697,13 @@ m_PackageAssets:
         - 1.14.7
         - 1.14.9
         - 1.14.12
+        - 1.14.13
         - 1.15.1
         - 1.15.4
         - 1.15.7
         - 1.15.9
         - 1.15.12
+        - 1.15.13
         - 2.0.0-preview.6
         - 2.0.0-preview.8
         - 2.0.0-preview.15
@@ -711,6 +718,7 @@ m_PackageAssets:
         - 1.15.7
         - 1.15.9
         - 1.15.12
+        - 1.15.13
         - 2.0.0-preview.6
         - 2.0.0-preview.8
         - 2.0.0-preview.15
@@ -721,7 +729,7 @@ m_PackageAssets:
         - 2.1.0-preview.3
         - 2.1.0-preview.5
         - 2.1.0-preview.6
-        verified: 1.15.12
+        verified: 1.15.13
       dependencies:
       - name: com.unity.services.core
         version: 1.0.1
@@ -1002,14 +1010,16 @@ m_PackageAssets:
         - 1.1.27
         - 1.1.29
         - 1.1.30
+        - 1.1.31
         - 2.0.1-pre.12
         - 2.0.1-pre.18
         compatible:
         - 1.1.29
         - 1.1.30
+        - 1.1.31
         - 2.0.1-pre.12
         - 2.0.1-pre.18
-        verified: 1.1.30
+        verified: 1.1.31
       dependencies:
       - name: com.unity.ext.nunit
         version: 1.0.6
@@ -1168,11 +1178,13 @@ m_PackageAssets:
         - 3.0.6
         - 3.2.0-pre.1
         - 3.2.0-pre.2
+        - 3.2.0-pre.3
         - 4.0.0-pre.1
         compatible:
         - 3.0.6
         - 3.2.0-pre.1
         - 3.2.0-pre.2
+        - 3.2.0-pre.3
         verified: 3.0.6
       dependencies:
       - name: com.unity.ugui
@@ -1301,6 +1313,7 @@ m_PackageAssets:
         - 1.6.4
         - 1.7.0-pre.1
         - 1.7.0-pre.2
+        - 1.7.0
         compatible:
         - 1.4.8
         - 1.5.0-pre.2
@@ -1327,6 +1340,7 @@ m_PackageAssets:
         - 1.6.4
         - 1.7.0-pre.1
         - 1.7.0-pre.2
+        - 1.7.0
         verified: 1.4.8
       dependencies:
       - name: com.unity.modules.director
@@ -1434,6 +1448,143 @@ m_PackageAssets:
         type: 
         url: 
         revision: 
+        path: 
+    - packageId: com.unity.xr.management@4.2.1
+      testable: 0
+      isDirectDependency: 1
+      version: 4.2.1
+      source: 1
+      resolvedPath: C:\Users\User\Epic Shooter\Library\PackageCache\com.unity.xr.management@4.2.1
+      assetPath: Packages/com.unity.xr.management
+      name: com.unity.xr.management
+      displayName: XR Plugin Management
+      author:
+        name: 
+        email: 
+        url: 
+      category: 
+      type: 
+      description: Package that provides simple management of XR plug-ins. Manages
+        and offers help with loading, initialization, settings, and build support
+        for XR plug-ins.
+      status: 4
+      errors: []
+      versions:
+        all:
+        - 0.1.0-preview.8
+        - 0.1.0-preview.12
+        - 1.0.0-preview.2
+        - 2.0.0-preview.3
+        - 2.0.0-preview.6
+        - 2.0.0-preview.9
+        - 2.0.0-preview.10
+        - 2.0.0-preview.13
+        - 2.0.0-preview.21
+        - 2.0.0-preview.22
+        - 2.0.0-preview.24
+        - 2.0.0-preview.25
+        - 2.0.0-preview.26
+        - 3.0.1
+        - 3.0.2-preview.1
+        - 3.0.2-preview.2
+        - 3.0.3
+        - 3.0.4-preview.1
+        - 3.0.4-preview.3
+        - 3.0.4
+        - 3.0.5-preview.1
+        - 3.0.5
+        - 3.0.6-preview.2
+        - 3.0.6
+        - 3.1.0-preview.2
+        - 3.2.4
+        - 3.2.6
+        - 3.2.7
+        - 3.2.9
+        - 3.2.10
+        - 3.2.11-preview.1
+        - 3.2.12
+        - 3.2.13
+        - 3.2.15
+        - 3.2.16
+        - 3.2.17
+        - 4.0.0-exp.2
+        - 4.0.0-pre.2
+        - 4.0.0-pre.3
+        - 4.0.1
+        - 4.0.3
+        - 4.0.5
+        - 4.0.6
+        - 4.0.7
+        - 4.1.0-pre.1
+        - 4.1.0-pre.2
+        - 4.1.0
+        - 4.2.0
+        - 4.2.1
+        compatible:
+        - 4.0.1
+        - 4.0.3
+        - 4.0.5
+        - 4.0.6
+        - 4.0.7
+        - 4.1.0-pre.1
+        - 4.1.0-pre.2
+        - 4.1.0
+        - 4.2.0
+        - 4.2.1
+        verified: 4.2.1
+      dependencies:
+      - name: com.unity.modules.subsystems
+        version: 1.0.0
+      - name: com.unity.modules.vr
+        version: 1.0.0
+      - name: com.unity.modules.xr
+        version: 1.0.0
+      - name: com.unity.xr.legacyinputhelpers
+        version: 2.1.7
+      - name: com.unity.subsystemregistration
+        version: 1.0.6
+      resolvedDependencies:
+      - name: com.unity.modules.subsystems
+        version: 1.0.0
+      - name: com.unity.modules.jsonserialize
+        version: 1.0.0
+      - name: com.unity.modules.vr
+        version: 1.0.0
+      - name: com.unity.modules.physics
+        version: 1.0.0
+      - name: com.unity.modules.xr
+        version: 1.0.0
+      - name: com.unity.xr.legacyinputhelpers
+        version: 2.1.8
+      - name: com.unity.subsystemregistration
+        version: 1.0.6
+      keywords:
+      - xr
+      - sdk
+      - ar
+      - vr
+      - management
+      - build
+      - plugin
+      registry:
+        id: main
+        name: 
+        url: https://packages.unity.com
+        scopes: []
+        isDefault: 1
+        capabilities: 7
+      hasRegistry: 1
+      hideInEditor: 1
+      entitlements:
+        isAllowed: 1
+      isAssetStorePackage: 0
+      datePublishedTicks: 637769778170000000
+      documentationUrl: 
+      hasRepository: 1
+      repository:
+        type: git
+        url: https://github.cds.internal.unity3d.com/unity/xr.sdk.management.git
+        revision: 9c99228887ff65cc0729434b3b9371d22b707cb9
         path: 
     - packageId: com.unity.modules.ai@1.0.0
       testable: 0
@@ -3177,6 +3328,130 @@ m_PackageAssets:
         url: 
         revision: 
         path: 
+    - packageId: com.unity.xr.legacyinputhelpers@2.1.8
+      testable: 0
+      isDirectDependency: 0
+      version: 2.1.8
+      source: 1
+      resolvedPath: C:\Users\User\Epic Shooter\Library\PackageCache\com.unity.xr.legacyinputhelpers@2.1.8
+      assetPath: Packages/com.unity.xr.legacyinputhelpers
+      name: com.unity.xr.legacyinputhelpers
+      displayName: XR Legacy Input Helpers
+      author:
+        name: 
+        email: 
+        url: 
+      category: XR
+      type: 
+      description: This package includes the tracked pose driver for the legacy input
+        system, the XR Bindings Seeding Tool and 3Dof Arm Model support for the Tracked
+        Pose Driver. The Tracked Pose Driver is a behavior that enables GameObjects
+        to track input devices, the XR Bindings Seeding Tool adds a menu item under
+        the 'Assets' menu which populates the Input Asset with Unity's crossplatform
+        Input Bindings
+      status: 4
+      errors: []
+      versions:
+        all:
+        - 2.1.8
+        compatible:
+        - 2.1.8
+        verified: 2.1.8
+      dependencies:
+      - name: com.unity.modules.vr
+        version: 1.0.0
+      - name: com.unity.modules.xr
+        version: 1.0.0
+      resolvedDependencies:
+      - name: com.unity.modules.vr
+        version: 1.0.0
+      - name: com.unity.modules.jsonserialize
+        version: 1.0.0
+      - name: com.unity.modules.physics
+        version: 1.0.0
+      - name: com.unity.modules.xr
+        version: 1.0.0
+      - name: com.unity.modules.subsystems
+        version: 1.0.0
+      keywords:
+      - TPD
+      - Tracked Pose Driver
+      - XR
+      - Input
+      - Helpers
+      registry:
+        id: main
+        name: 
+        url: https://packages.unity.com
+        scopes: []
+        isDefault: 1
+        capabilities: 7
+      hasRegistry: 1
+      hideInEditor: 1
+      entitlements:
+        isAllowed: 1
+      isAssetStorePackage: 0
+      datePublishedTicks: 0
+      documentationUrl: 
+      hasRepository: 1
+      repository:
+        type: git
+        url: https://github.cds.internal.unity3d.com/unity/com.unity.xr.legacyinputhelpers.git
+        revision: ed3b32c709a0e51cf73fda4b200c59b48955c4be
+        path: 
+    - packageId: com.unity.subsystemregistration@1.0.6
+      testable: 0
+      isDirectDependency: 0
+      version: 1.0.6
+      source: 1
+      resolvedPath: C:\Users\User\Epic Shooter\Library\PackageCache\com.unity.subsystemregistration@1.0.6
+      assetPath: Packages/com.unity.subsystemregistration
+      name: com.unity.subsystemregistration
+      displayName: Subsystem Registration
+      author:
+        name: 
+        email: 
+        url: 
+      category: 
+      type: 
+      description: Provides internal registration mechanism for standalone subsystems. 
+        It allows a standalone subsystem to inform the Subsystem Manager of its existence.
+      status: 4
+      errors: []
+      versions:
+        all:
+        - 1.0.6
+        - 1.1.0
+        compatible:
+        - 1.0.6
+        - 1.1.0
+        verified: 1.1.0
+      dependencies: []
+      resolvedDependencies: []
+      keywords:
+      - subsystem
+      - registration
+      - internal
+      registry:
+        id: main
+        name: 
+        url: https://packages.unity.com
+        scopes: []
+        isDefault: 1
+        capabilities: 7
+      hasRegistry: 1
+      hideInEditor: 1
+      entitlements:
+        isAllowed: 1
+      isAssetStorePackage: 0
+      datePublishedTicks: 0
+      documentationUrl: 
+      hasRepository: 1
+      repository:
+        type: git
+        url: git@github.cds.internal.unity3d.com:unity/com.unity.subsystemregistration.git
+        revision: 0b4157c6c0a160c51e74ead305aee77e6f29527d
+        path: 
     - packageId: com.unity.ext.nunit@1.0.6
       testable: 0
       isDirectDependency: 0
@@ -3271,6 +3546,8 @@ m_PackageAssets:
         - 1.1.0-pre.10
         - 1.1.0-pre.11
         - 1.1.0-pre.41
+        - 1.1.0-pre.69
+        - 1.2.0
         compatible:
         - 1.0.1
         - 1.1.0-pre.7
@@ -3279,6 +3556,8 @@ m_PackageAssets:
         - 1.1.0-pre.10
         - 1.1.0-pre.11
         - 1.1.0-pre.41
+        - 1.1.0-pre.69
+        - 1.2.0
         verified: 1.0.1
       dependencies:
       - name: com.unity.modules.unitywebrequest
@@ -3435,8 +3714,10 @@ m_PackageAssets:
         - 6.0.0
         - 6.0.1
         - 6.0.2
+        - 6.0.3
         - 7.0.0-pre.3
         - 7.0.0-pre.4
+        - 7.0.0
         compatible:
         - 4.0.4
         - 4.1.0
@@ -3522,6 +3803,7 @@ m_PackageAssets:
         - 5.0.0-pre.2
         - 5.0.0
         - 5.0.1
+        - 5.0.2
         compatible:
         - 4.0.2
         verified: 4.0.2

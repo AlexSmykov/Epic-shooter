@@ -1,0 +1,12 @@
+Coin;AvailableToUse;false;None
+Screw;AvailableToUse;false;None
+FemaleScrew;AvailableToUse;false;None
+Gear;AvailableToUse;false;None
+Key;AvailableToUse;false;None
+HealPotion;AvailableToUse;false;None
+PistolBullets;AvailableToUse;false;Pistol
+ShotgunBullets;AvailableToUse;false;Shotgun
+MachinegunBullets;AvailableToUse;false;Machinegun
+RifleBullets;AvailableToUse;false;Rifle
+PlasmagunBullets;AvailableToUse;false;Plasmagun
+BazookaBullets;AvailableToUse;false;Bazooka

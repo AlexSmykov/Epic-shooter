@@ -161,7 +161,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 18.8266, y: 0.1106987}
+  m_AnchoredPosition: {x: 18.28, y: 0.1106987}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &252546896
@@ -348,7 +348,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_EffectColor: {r: 0, g: 0, b: 0, a: 0.5}
-  m_EffectDistance: {x: 31.13, y: -30.89}
+  m_EffectDistance: {x: 15, y: -15}
   m_UseGraphicAlpha: 1
 --- !u!114 &474474995
 MonoBehaviour:
@@ -371,11 +371,11 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 12800000, guid: b910d55f426ec994eadd4881d9a8cec2, type: 3}
-    m_FontSize: 220
+    m_Font: {fileID: 12800000, guid: 9ce74b17bab03034bb70ed0693a2e64b, type: 3}
+    m_FontSize: 175
     m_FontStyle: 0
     m_BestFit: 0
-    m_MinSize: 10
+    m_MinSize: 1
     m_MaxSize: 300
     m_Alignment: 3
     m_AlignByGeometry: 0
@@ -427,7 +427,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 877, y: 480}
+  m_AnchoredPosition: {x: 842.99976, y: 480.00012}
   m_SizeDelta: {x: 7608.1523, y: 4003.5203}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &547835775
@@ -443,7 +443,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_EffectColor: {r: 0, g: 0, b: 0, a: 0.5}
-  m_EffectDistance: {x: 31.13, y: -30.89}
+  m_EffectDistance: {x: 15, y: -15}
   m_UseGraphicAlpha: 1
 --- !u!114 &547835776
 MonoBehaviour:
@@ -466,11 +466,11 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 12800000, guid: b910d55f426ec994eadd4881d9a8cec2, type: 3}
-    m_FontSize: 220
+    m_Font: {fileID: 12800000, guid: 9ce74b17bab03034bb70ed0693a2e64b, type: 3}
+    m_FontSize: 175
     m_FontStyle: 0
     m_BestFit: 0
-    m_MinSize: 10
+    m_MinSize: 1
     m_MaxSize: 300
     m_Alignment: 3
     m_AlignByGeometry: 0
@@ -708,7 +708,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_EffectColor: {r: 0, g: 0, b: 0, a: 0.5}
-  m_EffectDistance: {x: 31.13, y: -30.89}
+  m_EffectDistance: {x: 15, y: -15}
   m_UseGraphicAlpha: 1
 --- !u!114 &661329823
 MonoBehaviour:
@@ -731,11 +731,11 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 12800000, guid: b910d55f426ec994eadd4881d9a8cec2, type: 3}
-    m_FontSize: 220
+    m_Font: {fileID: 12800000, guid: 9ce74b17bab03034bb70ed0693a2e64b, type: 3}
+    m_FontSize: 175
     m_FontStyle: 0
     m_BestFit: 0
-    m_MinSize: 10
+    m_MinSize: 1
     m_MaxSize: 300
     m_Alignment: 3
     m_AlignByGeometry: 0
@@ -1015,8 +1015,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 1585.8, y: 796.1}
-  m_SizeDelta: {x: 4038.9, y: 4635.7}
+  m_AnchoredPosition: {x: 2175, y: 796.08997}
+  m_SizeDelta: {x: 4062.8, y: 4635.7}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &691005540
 MonoBehaviour:
@@ -1031,7 +1031,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_EffectColor: {r: 0, g: 0, b: 0, a: 0.5}
-  m_EffectDistance: {x: 31.13, y: -30.89}
+  m_EffectDistance: {x: 15, y: -15}
   m_UseGraphicAlpha: 1
 --- !u!114 &691005541
 MonoBehaviour:
@@ -1054,11 +1054,11 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 12800000, guid: b910d55f426ec994eadd4881d9a8cec2, type: 3}
-    m_FontSize: 220
+    m_Font: {fileID: 12800000, guid: 9ce74b17bab03034bb70ed0693a2e64b, type: 3}
+    m_FontSize: 175
     m_FontStyle: 0
     m_BestFit: 0
-    m_MinSize: 2
+    m_MinSize: 1
     m_MaxSize: 300
     m_Alignment: 3
     m_AlignByGeometry: 0
@@ -1568,7 +1568,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 339.11, y: -881}
+  m_AnchoredPosition: {x: 305.12, y: -881}
   m_SizeDelta: {x: 6532.4, y: 980.94}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1368778518
@@ -1584,7 +1584,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_EffectColor: {r: 0, g: 0, b: 0, a: 0.5}
-  m_EffectDistance: {x: 31.13, y: -30.89}
+  m_EffectDistance: {x: 15, y: -15}
   m_UseGraphicAlpha: 1
 --- !u!114 &1368778519
 MonoBehaviour:
@@ -1607,11 +1607,11 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 12800000, guid: b910d55f426ec994eadd4881d9a8cec2, type: 3}
-    m_FontSize: 220
+    m_Font: {fileID: 12800000, guid: 9ce74b17bab03034bb70ed0693a2e64b, type: 3}
+    m_FontSize: 175
     m_FontStyle: 0
     m_BestFit: 0
-    m_MinSize: 2
+    m_MinSize: 1
     m_MaxSize: 300
     m_Alignment: 3
     m_AlignByGeometry: 0
@@ -1741,6 +1741,7 @@ GameObject:
   - component: {fileID: 1582831985}
   - component: {fileID: 1582831984}
   - component: {fileID: 1582831983}
+  - component: {fileID: 1582831987}
   m_Layer: 0
   m_Name: BlackBg
   m_TagString: BlackBG
@@ -1770,7 +1771,7 @@ Animator:
   m_GameObject: {fileID: 1582831982}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: cc0598ed979956d4bab56bbd5b37a37a, type: 2}
+  m_Controller: {fileID: 9100000, guid: 0f87bf12af42841469600d7a7ca52f87, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -1844,6 +1845,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1582831987
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1582831982}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: be85341d5900ffc41bc648cc78245b6d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1685008301
 GameObject:
   m_ObjectHideFlags: 0
@@ -2235,7 +2248,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 608af37d8226f324fae1ad9f6f875918, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Bg: {fileID: 1582831982}
   MenuObject: {fileID: 547887284}
 --- !u!1 &1794485042
 GameObject:

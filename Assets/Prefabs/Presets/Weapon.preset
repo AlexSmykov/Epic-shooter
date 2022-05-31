@@ -1,0 +1,125 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!181963792 &2655988077585873504
+Preset:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: Weapon
+  m_TargetType:
+    m_NativeTypeID: 114
+    m_ManagedTypePPtr: {fileID: 11500000, guid: 1e8c20041437370498ca7147cbd40cb1,
+      type: 3}
+    m_ManagedTypeFallback: 
+  m_Properties:
+  - target: {fileID: 0}
+    propertyPath: m_Enabled
+    value: 1
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: m_EditorHideFlags
+    value: 0
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: m_EditorClassIdentifier
+    value: 
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: _Bullet
+    value: 
+    objectReference: {fileID: 4821027720726471112, guid: 681a263374ec3134f9dc6b7a6be45a81,
+      type: 3}
+  - target: {fileID: 0}
+    propertyPath: _ReloadSound
+    value: 
+    objectReference: {fileID: 8300000, guid: f0aa3a16587d65744b2cae8a65b2705a, type: 3}
+  - target: {fileID: 0}
+    propertyPath: _ShotSound
+    value: 
+    objectReference: {fileID: 8300000, guid: cfaf4f23272f2bb4cb3a70d01fa127d1, type: 3}
+  - target: {fileID: 0}
+    propertyPath: _BulletReloadTime
+    value: 0.3
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: _ClipRecoilTime
+    value: 4
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: _ClipSize
+    value: 1
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: _BulletsCount
+    value: 35
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: _ShotBulletPenalty
+    value: 1
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: _Damage
+    value: 35
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: _BulletSpeed
+    value: 10
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: _Accuracy
+    value: 14
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: _FirstLvl
+    value: 
+    objectReference: {fileID: 21300000, guid: 7c1c91573eb0f0e4bb89a54fb9a87b65, type: 3}
+  - target: {fileID: 0}
+    propertyPath: _SecondLvl
+    value: 
+    objectReference: {fileID: 21300000, guid: 82213e2b826550d4a80ab47c8aaa278c, type: 3}
+  - target: {fileID: 0}
+    propertyPath: _ThirdLvl
+    value: 
+    objectReference: {fileID: 21300000, guid: 7776aee95ab85dc45920989707e90915, type: 3}
+  - target: {fileID: 0}
+    propertyPath: _SecondLvlScore
+    value: 11
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: _ThirdLvlScore
+    value: 15
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: _DamageBonusLevel
+    value: 1
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: _FireRateBonusLevel
+    value: 1
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: _BulletSpeedBonusLevel
+    value: 1
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: _ClipRecoilBonusLevel
+    value: 1
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: _ClipSizeBonusLevel
+    value: 1
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: _MultiShotBonusLevel
+    value: 1
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: _PenetrationBonusLevel
+    value: 1
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: Unlocked
+    value: 0
+    objectReference: {fileID: 0}
+  m_ExcludedProperties: []

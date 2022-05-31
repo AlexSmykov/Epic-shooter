@@ -47,55 +47,63 @@
     <ImplicitlyExpandDesignTimeFacades>false</ImplicitlyExpandDesignTimeFacades>
   </PropertyGroup>
   <ItemGroup>
-     <Compile Include="Assets\Scripts\Alex&apos;s Script\Items\ItemEffects.cs" />
-     <Compile Include="Assets\Scripts\Alex&apos;s Script\Guns\WeaponSwitch.cs" />
-     <Compile Include="Assets\Scripts\Alex&apos;s Script\Enemies\AttackByAnimation.cs" />
-     <Compile Include="Assets\Scripts\Alex&apos;s Script\Rooms\ChangeRoom.cs" />
-     <Compile Include="Assets\Scripts\Alex&apos;s Script\Enemies\SpawnEnemiesAbility.cs" />
-     <Compile Include="Assets\Scripts\Alex&apos;s Script\Enemies\EnemySpawnPoint.cs" />
-     <Compile Include="Assets\OpenMap.cs" />
-     <Compile Include="Assets\Scripts\Player.cs" />
-     <Compile Include="Assets\Scripts\Alex&apos;s Script\Enemies\AttackByCollision.cs" />
-     <Compile Include="Assets\Scripts\Alex&apos;s Script\Other\ObjectStorage.cs" />
-     <Compile Include="Assets\Scripts\Alex&apos;s Script\Other\ArrayHolder.cs" />
-     <Compile Include="Assets\Scripts\Alex&apos;s Script\Other\FloatingDamage.cs" />
-     <Compile Include="Assets\Scripts\Alex&apos;s Script\Bullet\Bullet.cs" />
-     <Compile Include="Assets\Scripts\Alex&apos;s Script\Guns\WeaponGrab.cs" />
-     <Compile Include="Assets\Scripts\Alex&apos;s Script\Menu\Menu.cs" />
-     <Compile Include="Assets\Scripts\Alex&apos;s Script\Guns\Gun.cs" />
-     <Compile Include="Assets\Scripts\ClonePlayer.cs" />
-     <Compile Include="Assets\Scripts\Alex&apos;s Script\Enemies\Enemy.cs" />
-     <Compile Include="Assets\Scripts\Alex&apos;s Script\Floors\FloorMaker.cs" />
-     <Compile Include="Assets\SpriteRandomer.cs" />
-     <Compile Include="Assets\Scripts\Alex&apos;s Script\Items\ItemInfo.cs" />
-     <Compile Include="Assets\Save.cs" />
-     <Compile Include="Assets\Scripts\Alex&apos;s Script\Menu\CongatulationMenu.cs" />
-     <Compile Include="Assets\Scripts\Alex&apos;s Script\Shop\ShopPlaceSpawnPoint.cs" />
-     <Compile Include="Assets\Scripts\Alex&apos;s Script\Enemies\MoveToTarget.cs" />
-     <Compile Include="Assets\Scripts\Alex&apos;s Script\Other\CameraMove.cs" />
-     <Compile Include="Assets\Scripts\Alex&apos;s Script\Bullet\Bang.cs" />
-     <Compile Include="Assets\Scripts\Alex&apos;s Script\Other\OneItemHolder.cs" />
-     <Compile Include="Assets\Scripts\Alex&apos;s Script\Chest\SpawnChest.cs" />
-     <Compile Include="Assets\Scripts\Alex&apos;s Script\Other\FlipSpriteByTarget.cs" />
-     <Compile Include="Assets\Scripts\Alex&apos;s Script\Workshop\WorkshopItemSpawn.cs" />
-     <Compile Include="Assets\Scripts\Alex&apos;s Script\Enemies\SlimeJumpMove.cs" />
-     <Compile Include="Assets\Scripts\Alex&apos;s Script\Other\Pickups.cs" />
-     <Compile Include="Assets\Scripts\Alex&apos;s Script\Shop\ShopCostForObjects.cs" />
-     <Compile Include="Assets\Scripts\Alex&apos;s Script\Enemies\SpawnEnemies.cs" />
-     <Compile Include="Assets\BloodScript.cs" />
-     <Compile Include="Assets\Scripts\Alex&apos;s Script\Floors\NewFloor.cs" />
-     <Compile Include="Assets\Scripts\Alex&apos;s Script\Chest\Chest.cs" />
-     <Compile Include="Assets\Scripts\Alex&apos;s Script\Shop\ShopItemSpawn.cs" />
-     <Compile Include="Assets\Scripts\GameControl.cs" />
-     <Compile Include="Assets\Scripts\Alex&apos;s Script\Workshop\WorkshopItemSpawnpoint.cs" />
-     <Compile Include="Assets\Scripts\Alex&apos;s Script\Items\Item.cs" />
-     <Compile Include="Assets\Scripts\CameraShake.cs" />
-     <Compile Include="Assets\Scripts\Alex&apos;s Script\Rooms\Room.cs" />
-     <Compile Include="Assets\Scripts\Alex&apos;s Script\Menu\StartGameScene.cs" />
-     <Compile Include="Assets\Scripts\GunControl.cs" />
-     <Compile Include="Assets\Scripts\PlayerMoving.cs" />
-     <Compile Include="Assets\Scripts\Alex&apos;s Script\Player\HealthBar.cs" />
-     <Compile Include="Assets\Scripts\Alex&apos;s Script\Player\PlayerMove.cs" />
+     <Compile Include="Assets\Scripts\Items\ItemEffects.cs" />
+     <Compile Include="Assets\Scripts\Weapons\WeaponSwitch.cs" />
+     <Compile Include="Assets\Scripts\Chest\ItemChest.cs" />
+     <Compile Include="Assets\Scripts\Enemies\AttackByAnimation.cs" />
+     <Compile Include="Assets\Scripts\Rooms\DoorTrigger.cs" />
+     <Compile Include="Assets\Scripts\Enemies\SpawnEnemiesAbility.cs" />
+     <Compile Include="Assets\Scripts\Other\Factory.cs" />
+     <Compile Include="Assets\Scripts\Map\OpenMap.cs" />
+     <Compile Include="Assets\Scripts\Global\Pickupable.cs" />
+     <Compile Include="Assets\Scripts\Player\KeyboardController.cs" />
+     <Compile Include="Assets\Scripts\Player\Player.cs" />
+     <Compile Include="Assets\Scripts\Enemies\Boss.cs" />
+     <Compile Include="Assets\Scripts\Enemies\AttackByCollision.cs" />
+     <Compile Include="Assets\Scripts\Other\ArrayHolder.cs" />
+     <Compile Include="Assets\Scripts\Other\FloatingDamage.cs" />
+     <Compile Include="Assets\Scripts\Bullet\Bullet.cs" />
+     <Compile Include="Assets\Scripts\Weapons\WeaponPickupable.cs" />
+     <Compile Include="Assets\Scripts\Menu\Menu.cs" />
+     <Compile Include="Assets\Scripts\Weapons\Weapon.cs" />
+     <Compile Include="Assets\Scripts\Chest\WeaponChest.cs" />
+     <Compile Include="Assets\Scripts\Global\StateMachine.cs" />
+     <Compile Include="Assets\Scripts\Enemies\Enemy.cs" />
+     <Compile Include="Assets\Scripts\Floors\FloorMaker.cs" />
+     <Compile Include="Assets\Scripts\Sprites\SpriteRandomer.cs" />
+     <Compile Include="Assets\Scripts\Items\ItemInfo.cs" />
+     <Compile Include="Assets\Scripts\Save\Save.cs" />
+     <Compile Include="Assets\Scripts\Menu\CongatulationMenu.cs" />
+     <Compile Include="Assets\Scripts\Camera\RoomChanger.cs" />
+     <Compile Include="Assets\Scripts\Enemies\MoveToTarget.cs" />
+     <Compile Include="Assets\Scripts\Bullet\Bang.cs" />
+     <Compile Include="Assets\Scripts\Other\FileReader.cs" />
+     <Compile Include="Assets\Scripts\Other\OneItemHolder.cs" />
+     <Compile Include="Assets\Scripts\Shops\ShopPlace.cs" />
+     <Compile Include="Assets\Scripts\Enemies\SpawnEnemiesAfterDieAbility.cs" />
+     <Compile Include="Assets\Scripts\Save\Savable.cs" />
+     <Compile Include="Assets\Scripts\Enemies\SlimeJumpMove.cs" />
+     <Compile Include="Assets\Scripts\Other\Pickups.cs" />
+     <Compile Include="Assets\Scripts\Shops\ShopCostForObjects.cs" />
+     <Compile Include="Assets\Scripts\Sprites\BloodScript.cs" />
+     <Compile Include="Assets\Scripts\Player\PickupController.cs" />
+     <Compile Include="Assets\Scripts\Floors\NewFloor.cs" />
+     <Compile Include="Assets\Scripts\TxtReader\TxtReader.cs" />
+     <Compile Include="Assets\Scripts\Chest\Chest.cs" />
+     <Compile Include="Assets\Scripts\Camera\BlackBG.cs" />
+     <Compile Include="Assets\Scripts\Global\WithId.cs" />
+     <Compile Include="Assets\Scripts\Global\Saver.cs" />
+     <Compile Include="Assets\Scripts\Items\Item.cs" />
+     <Compile Include="Assets\Scripts\Player\ResourcesManager.cs" />
+     <Compile Include="Assets\Scripts\Chest\PickupsChest.cs" />
+     <Compile Include="Assets\Scripts\Rooms\Room.cs" />
+     <Compile Include="Assets\Scripts\Menu\StartGameScene.cs" />
+     <Compile Include="Assets\Scripts\Other\Randomer.cs" />
+     <Compile Include="Assets\Scripts\Player\HealthBar.cs" />
+     <None Include="Assets\Resources\ObjectActivityStates\Pickups.txt" />
+     <None Include="Assets\Resources\ObjectActivityStates\Weapons.txt" />
+     <None Include="Assets\Resources\ObjectActivityStates\Chests.txt" />
+     <None Include="Assets\Resources\ObjectActivityStates\Items.txt" />
  <Reference Include="UnityEngine">
  <HintPath>C:/Program Files/Unity/Hub/Editor/2020.3.26f1/Editor/Data/Managed/UnityEngine/UnityEngine.dll</HintPath>
  </Reference>
@@ -684,6 +692,9 @@
  <Reference Include="Unity.TextMeshPro.Editor">
  <HintPath>C:/Users/User/Epic Shooter/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
  </Reference>
+ <Reference Include="Unity.XR.Management.Editor">
+ <HintPath>C:/Users/User/Epic Shooter/Library/ScriptAssemblies/Unity.XR.Management.Editor.dll</HintPath>
+ </Reference>
  <Reference Include="Unity.Timeline">
  <HintPath>C:/Users/User/Epic Shooter/Library/ScriptAssemblies/Unity.Timeline.dll</HintPath>
  </Reference>
@@ -702,8 +713,8 @@
  <Reference Include="Unity.2D.Path.Editor">
  <HintPath>C:/Users/User/Epic Shooter/Library/ScriptAssemblies/Unity.2D.Path.Editor.dll</HintPath>
  </Reference>
- <Reference Include="Unity.InternalAPIEditorBridge.001">
- <HintPath>C:/Users/User/Epic Shooter/Library/ScriptAssemblies/Unity.InternalAPIEditorBridge.001.dll</HintPath>
+ <Reference Include="Unity.Subsystem.Registration">
+ <HintPath>C:/Users/User/Epic Shooter/Library/ScriptAssemblies/Unity.Subsystem.Registration.dll</HintPath>
  </Reference>
  <Reference Include="UnityEditor.UI">
  <HintPath>C:/Users/User/Epic Shooter/Library/ScriptAssemblies/UnityEditor.UI.dll</HintPath>
@@ -714,14 +725,23 @@
  <Reference Include="Unity.Rider.Editor">
  <HintPath>C:/Users/User/Epic Shooter/Library/ScriptAssemblies/Unity.Rider.Editor.dll</HintPath>
  </Reference>
+ <Reference Include="Unity.InternalAPIEditorBridge.001">
+ <HintPath>C:/Users/User/Epic Shooter/Library/ScriptAssemblies/Unity.InternalAPIEditorBridge.001.dll</HintPath>
+ </Reference>
  <Reference Include="UnityEngine.UI">
  <HintPath>C:/Users/User/Epic Shooter/Library/ScriptAssemblies/UnityEngine.UI.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEngine.SpatialTracking">
+ <HintPath>C:/Users/User/Epic Shooter/Library/ScriptAssemblies/UnityEngine.SpatialTracking.dll</HintPath>
  </Reference>
  <Reference Include="Unity.Mathematics">
  <HintPath>C:/Users/User/Epic Shooter/Library/ScriptAssemblies/Unity.Mathematics.dll</HintPath>
  </Reference>
  <Reference Include="Unity.2D.IK.Runtime">
  <HintPath>C:/Users/User/Epic Shooter/Library/ScriptAssemblies/Unity.2D.IK.Runtime.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEngine.XR.LegacyInputHelpers">
+ <HintPath>C:/Users/User/Epic Shooter/Library/ScriptAssemblies/UnityEngine.XR.LegacyInputHelpers.dll</HintPath>
  </Reference>
  <Reference Include="Unity.2D.Animation.Triangle.Runtime">
  <HintPath>C:/Users/User/Epic Shooter/Library/ScriptAssemblies/Unity.2D.Animation.Triangle.Runtime.dll</HintPath>
@@ -735,6 +755,12 @@
  <Reference Include="Unity.Timeline.Editor">
  <HintPath>C:/Users/User/Epic Shooter/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
  </Reference>
+ <Reference Include="UnityEditor.XR.LegacyInputHelpers">
+ <HintPath>C:/Users/User/Epic Shooter/Library/ScriptAssemblies/UnityEditor.XR.LegacyInputHelpers.dll</HintPath>
+ </Reference>
+ <Reference Include="Unity.XR.Management">
+ <HintPath>C:/Users/User/Epic Shooter/Library/ScriptAssemblies/Unity.XR.Management.dll</HintPath>
+ </Reference>
  <Reference Include="Unity.Mathematics.Editor">
  <HintPath>C:/Users/User/Epic Shooter/Library/ScriptAssemblies/Unity.Mathematics.Editor.dll</HintPath>
  </Reference>
@@ -743,6 +769,9 @@
  </Reference>
  <Reference Include="Unity.2D.SpriteShape.Editor">
  <HintPath>C:/Users/User/Epic Shooter/Library/ScriptAssemblies/Unity.2D.SpriteShape.Editor.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEditor.SpatialTracking">
+ <HintPath>C:/Users/User/Epic Shooter/Library/ScriptAssemblies/UnityEditor.SpatialTracking.dll</HintPath>
  </Reference>
  <Reference Include="Unity.2D.Common.Editor">
  <HintPath>C:/Users/User/Epic Shooter/Library/ScriptAssemblies/Unity.2D.Common.Editor.dll</HintPath>
