@@ -114,7 +114,11 @@ public class Player : MonoBehaviour
     {
         PlayerPrefs.SetFloat("MaxHealth", 150);
         PlayerPrefs.SetFloat("Health", 150);
-        PlayerPrefs.GetString("PlayerCords", new Vector3Int(0, 0, 0).ToString());
+    }
+
+    public void ResetSavePosition()
+    {
+        PlayerPrefs.SetString("PlayerCords", new Vector3Int(0, 0, 0).ToString());
     }
 
     public void Load()
@@ -136,9 +140,7 @@ public class Player : MonoBehaviour
         PlayerPrefs.SetFloat("MaxHealth", _MaxHealth);
         PlayerPrefs.SetFloat("Health", _Health);
         GetComponent<ResourcesManager>().Save();
-        Debug.Log(transform.position.ToString());
         PlayerPrefs.SetString("PlayerCords", transform.position.ToString());
-        Debug.Log(PlayerPrefs.HasKey("PlayerCords"));
     }
 
     private void Update()
@@ -146,7 +148,6 @@ public class Player : MonoBehaviour
         LookAtCursor();
         if(_Health <= 0)
         {
-            Debug.Log("Da?");
             PlayerPrefs.DeleteAll();
             SceneManager.LoadScene("Alex's scene");
         }

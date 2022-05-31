@@ -25,12 +25,15 @@ public class WeaponSwitch : MonoBehaviour
             transform.GetChild(i).GetComponent<Weapon>().Save();
             PlayerPrefs.SetString("Weapon" + i.ToString() + "Unlocked", UnlockedWeapons[i].ToString());
         }
+
+        PlayerPrefs.SetInt("WeaponIndex", WeaponIndex);
     }
 
     public void Load()
     {
         WeaponCount = transform.childCount;
         UnlockedWeapons = new bool[WeaponCount];
+        WeaponIndex = PlayerPrefs.GetInt("WeaponIndex", WeaponIndex);
 
         for (int i = 0; i < UnlockedWeapons.Length; i++)
         {
@@ -120,7 +123,6 @@ public class WeaponSwitch : MonoBehaviour
     /// </summary>
     public void UnlockWeapon(StateMachine.WeaponLink Weapon)
     {
-        Debug.Log((int)Weapon - 1);
         UnlockedWeapons[(int)Weapon - 1] = true;
     }
 }

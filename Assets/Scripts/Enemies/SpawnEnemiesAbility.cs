@@ -33,7 +33,6 @@ public class SpawnEnemiesAbility : MonoBehaviour
     }
     public void SpawnEnemies(GameObject Enemy, int Count)
     {
-        Debug.Log(_EnemyToSpawn);
         for (int i = 0; i < Count; i++)
         {
             SpawnEnemy(Enemy);

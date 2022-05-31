@@ -111,9 +111,9 @@ MonoBehaviour:
   _Damage: 7
   _BulletSpeed: 20
   _Accuracy: 26
-  _FirstLvl: {fileID: 21300000, guid: 7c1c91573eb0f0e4bb89a54fb9a87b65, type: 3}
-  _SecondLvl: {fileID: 21300000, guid: 82213e2b826550d4a80ab47c8aaa278c, type: 3}
-  _ThirdLvl: {fileID: 21300000, guid: 7776aee95ab85dc45920989707e90915, type: 3}
+  _FirstLvl: {fileID: 21300000, guid: cb64f30158661fe488259ab8a6fea4bc, type: 3}
+  _SecondLvl: {fileID: 21300000, guid: 3a4a75d3ad6ad7d4f9164902676fcf08, type: 3}
+  _ThirdLvl: {fileID: 21300000, guid: f285348ba2a7c3348b7c1618560c500f, type: 3}
   _SecondLvlScore: 16
   _ThirdLvlScore: 20
   _DamageBonusLevel: 1
@@ -123,6 +123,8 @@ MonoBehaviour:
   _ClipSizeBonusLevel: 1
   _MultiShotBonusLevel: 6
   _PenetrationBonusLevel: 1
+  _BangAfterDestroy: 0
+  _BangRadius: 2
   Unlocked: 0
 --- !u!82 &3635289719250983844
 AudioSource:

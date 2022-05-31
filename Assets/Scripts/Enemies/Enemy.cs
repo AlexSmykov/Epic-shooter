@@ -156,6 +156,7 @@ public class Enemy : MonoBehaviour
     {
         if(collision.CompareTag("Bang"))
         {
+            Debug.Log("Zadevaet");
             TakeDamage(collision.GetComponent<Bang>().Damage);
         }
     }

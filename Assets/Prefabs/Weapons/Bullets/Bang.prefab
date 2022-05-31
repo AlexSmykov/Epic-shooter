@@ -60,5 +60,3 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fffe07f85dc9bf6499bdb47b3d74dd75, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  BangRadius: 0
-  Damage: 0

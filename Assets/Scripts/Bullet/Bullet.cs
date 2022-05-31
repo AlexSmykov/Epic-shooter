@@ -44,7 +44,10 @@ public class Bullet : MonoBehaviour
 
 	[SerializeField] private bool _BangAfterDestroy;
 	public bool BangAfterDestroy { get { return _BangAfterDestroy; } set { _BangAfterDestroy = value; } }
-	[SerializeField] private float _BangRadius;
+	private float _BangRadius;
+	public float BangRadius { get { return _BangRadius; } set { _BangRadius = value; } }
+	private float _BangDamage;
+	public float BangDamage { get { return _BangDamage; } set { _BangDamage = value; } }
 	[SerializeField] private GameObject _Bang;
 
 	private float PenetrationReloadTime;
@@ -89,11 +92,17 @@ public class Bullet : MonoBehaviour
 				{
 					collision.collider.GetComponent<Enemy>().TakeDamage(-_Damage);
 					_PenetrationCount--;
-					PenetrationReloadTime = 0.04f;
+					PenetrationReloadTime = 0.01f;
 					_Collider2D.enabled = false;
 				}
                 else
 				{
+					if (_BangAfterDestroy)
+					{
+						GameObject bang = Instantiate(_Bang, transform.position, Quaternion.identity);
+						bang.GetComponent<Bang>().BangRadius = _BangRadius;
+						bang.GetComponent<Bang>().Damage = -_BangDamage;
+					}
 					Instantiate(_DestroyEffect, transform.position, Quaternion.identity);
 					Destroy(gameObject);
 				}
@@ -104,7 +113,7 @@ public class Bullet : MonoBehaviour
                     {
 						GameObject bang = Instantiate(_Bang, transform.position, Quaternion.identity);
 						bang.GetComponent<Bang>().BangRadius = _BangRadius;
-						bang.GetComponent<Bang>().Damage = -_Damage;
+						bang.GetComponent<Bang>().Damage = -_BangDamage;
 					}
 
 					Destroy(gameObject);

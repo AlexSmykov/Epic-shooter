@@ -55,6 +55,8 @@ public class Weapon : MonoBehaviour
 	public int PenetrationBonusLevel { get { return _PenetrationBonusLevel; } set { _PenetrationBonusLevel = value; } }
 
 	[SerializeField] private bool _BangAfterDestroy;
+	[SerializeField] private float _BangRadius;
+	[SerializeField] private float _BangDamage;
 	private bool _GiveBullet;
 	[HideInInspector] public bool Unlocked;
 
@@ -71,6 +73,7 @@ public class Weapon : MonoBehaviour
 		_Sprite = GetComponent<SpriteRenderer>();
 		_ShotPoint = transform.GetChild(0);
 		BulletTextUpdate();
+		UpdateSkin();
 	}
 
 	public void Load()
@@ -140,6 +143,8 @@ public class Weapon : MonoBehaviour
 				bullet.Damage = _Damage * (float)(1 + Mathf.Log(Mathf.Pow((float)((_DamageBonusLevel - 1) * 0.75), 1.2f) / 5 + 1, 2));
 				bullet.Speed = _BulletSpeed * (float)(1 + Mathf.Pow(_BulletSpeedBonusLevel - 1, 0.9f) / 6);
 				bullet.PenetrationCount = _PenetrationBonusLevel;
+				bullet.BangRadius = _BangRadius;
+				bullet.BangDamage = _BangDamage;
 			}
 
 			_audioSource.PlayOneShot(_ShotSound);
@@ -180,13 +185,13 @@ public class Weapon : MonoBehaviour
 			_MultiShotBonusLevel + 
 			_PenetrationBonusLevel);
 
-		if (Level <= _ThirdLvlScore)
+		if (Level >= _ThirdLvlScore)
 		{
-			_Sprite.sprite = _SecondLvl;
-		}
-		else if (Level <= _SecondLvlScore)
-        {
 			_Sprite.sprite = _ThirdLvl;
+		}
+		else if (Level >= _SecondLvlScore)
+        {
+			_Sprite.sprite = _SecondLvl;
 		}
         else
 		{

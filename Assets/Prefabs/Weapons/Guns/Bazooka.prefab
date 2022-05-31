@@ -135,7 +135,7 @@ MonoBehaviour:
   _ClipSize: 1
   _BulletsCount: 35
   _ShotBulletPenalty: 1
-  _Damage: 35
+  _Damage: 15
   _BulletSpeed: 10
   _Accuracy: 14
   _FirstLvl: {fileID: 21300000, guid: 7c1c91573eb0f0e4bb89a54fb9a87b65, type: 3}
@@ -151,6 +151,8 @@ MonoBehaviour:
   _MultiShotBonusLevel: 1
   _PenetrationBonusLevel: 1
   _BangAfterDestroy: 1
+  _BangRadius: 3
+  _BangDamage: 30
   Unlocked: 0
 --- !u!82 &1339889804454896065
 AudioSource:

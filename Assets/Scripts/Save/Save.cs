@@ -28,15 +28,16 @@ public class Save : MonoBehaviour
         if (_SaveAllowed)
         {
             _Saver.Save();
+            _Player.GetComponent<Player>().Save();
+            _Player.GetComponentInChildren<WeaponSwitch>().Save();
 
             if (IsNewFloor)
             {
                 _FloorMaker.NewFloor();
                 _Map.ResetSave();
+                _Player.GetComponent<Player>().ResetSavePosition();
             }
 
-            _Player.GetComponent<Player>().Save();
-            _Player.GetComponentInChildren<WeaponSwitch>().Save();
         }
     }
 }

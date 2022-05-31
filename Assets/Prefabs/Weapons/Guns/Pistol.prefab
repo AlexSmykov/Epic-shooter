@@ -154,6 +154,7 @@ MonoBehaviour:
   _MultiShotBonusLevel: 1
   _PenetrationBonusLevel: 1
   _BangAfterDestroy: 0
+  _BangRadius: 2
   Unlocked: 0
 --- !u!82 &2264956568345025332
 AudioSource:

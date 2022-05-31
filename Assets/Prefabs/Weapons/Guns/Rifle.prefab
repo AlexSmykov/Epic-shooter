@@ -153,6 +153,8 @@ MonoBehaviour:
   _ClipSizeBonusLevel: 1
   _MultiShotBonusLevel: 1
   _PenetrationBonusLevel: 2
+  _BangAfterDestroy: 0
+  _BangRadius: 2
   Unlocked: 0
 --- !u!82 &9205217064412763962
 AudioSource:
