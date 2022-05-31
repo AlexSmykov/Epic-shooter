@@ -39,7 +39,7 @@ public class KeyboardController : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.Space))
         {
-            _Player.Dash();
+            StartCoroutine(_Player.Dash());
         }
 
         if (Input.GetKeyDown(KeyCode.LeftShift))

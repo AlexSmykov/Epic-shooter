@@ -493,7 +493,10 @@ MonoBehaviour:
 
     toggle map - shift
 
-    toggle hud - f1'
+    toggle hud - f1
+
+    dash
+    - space'
 --- !u!222 &547835777
 CanvasRenderer:
   m_ObjectHideFlags: 0

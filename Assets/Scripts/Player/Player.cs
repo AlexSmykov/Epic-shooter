@@ -10,6 +10,7 @@ using UnityEngine.SceneManagement;
 [RequireComponent(typeof(Resources))]
 [RequireComponent(typeof(Animator))]
 [RequireComponent(typeof(Rigidbody2D))]
+[RequireComponent(typeof(KeyboardController))]
 public class Player : MonoBehaviour
 {
     [SerializeField] private float _MaxHealth;
@@ -166,13 +167,17 @@ public class Player : MonoBehaviour
         }
     }
 
-    public void Dash()
+    public IEnumerator Dash()
     {
         if ((_Direction.x != 0 || _Direction.y != 0) && _CurrentDashReloadTime < 0)
         {
             Instantiate(_DashEffect, transform.position, Quaternion.identity);
-            _Rigidbody.AddForce(_Direction.normalized * 6000, ForceMode2D.Force);
-            _CurrentDashReloadTime = _DashReloadTime;
+            for (int i = 0; i < 100; i++)
+            {
+                _Rigidbody.AddForce(_Direction.normalized * 60, ForceMode2D.Force);
+                _CurrentDashReloadTime = _DashReloadTime;
+                yield return new WaitForSeconds(0.0005f);
+            }
         }
     }
 

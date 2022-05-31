@@ -21,10 +21,10 @@ MonoBehaviour:
     y: 30
     width: 1920
     height: 947
-  m_MinSize: {x: 679, y: 492}
-  m_MaxSize: {x: 14002, y: 14042}
+  m_MinSize: {x: 677, y: 492}
+  m_MaxSize: {x: 14001, y: 14042}
   vertical: 0
-  controlID: 21476
+  controlID: 22208
 --- !u!114 &2
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -136,10 +136,10 @@ MonoBehaviour:
     y: 0
     width: 1418
     height: 947
-  m_MinSize: {x: 403, y: 492}
+  m_MinSize: {x: 402, y: 492}
   m_MaxSize: {x: 10001, y: 14042}
   vertical: 1
-  controlID: 21477
+  controlID: 22209
 --- !u!114 &4
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -161,10 +161,10 @@ MonoBehaviour:
     y: 0
     width: 1418
     height: 567
-  m_MinSize: {x: 403, y: 221}
-  m_MaxSize: {x: 8003, y: 4021}
+  m_MinSize: {x: 402, y: 221}
+  m_MaxSize: {x: 8002, y: 4021}
   vertical: 0
-  controlID: 21478
+  controlID: 22210
 --- !u!114 &5
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -222,7 +222,7 @@ MonoBehaviour:
       scrollPos: {x: 0, y: 0}
       m_SelectedIDs: 
       m_LastClickedID: 0
-      m_ExpandedIDs: 1a90fbffc290fbffaecffbffc6cffbff6ed0fbff5e7cfcff767cfcff1e7dfcff909bfcff6019fdff081afdff7a41fdff2242fdffae64fdff5665fdfffa7ffdffa280fdff0aa0fdffb2a0fdff62a1fdff7ca1fdff8ea2fdff4ca3fdff50a3fdff1cf7fdff34f7fdffdcf7fdff2a1afeffb45dfeff5c5efeffd672fefff272feff0474feffc274feffc674feff661cffff9e37ffffe048ffff1672ffffc0b1fffff2b5ffff64b8ffff2cbaffff42bcffff06f7ffff46f9ffffd8f9ffff5efbffffacb30000e0b300003ab4000040b7000074b70000ceb7000040ba000074ba0000ceba000086c70000b8c700000ad400003cd40000
+      m_ExpandedIDs: 6ab4f9ff86b4f9ff98b5f9ff58b6f9ff5cb6f9ff1a90fbffc290fbffaecffbffc6cffbff6ed0fbff5e7cfcff767cfcff1e7dfcff909bfcff6019fdff081afdff7a41fdff2242fdffae64fdff5665fdfffa7ffdffa280fdff0aa0fdffb2a0fdff62a1fdff7ca1fdff8ea2fdff4ca3fdff50a3fdff1cf7fdff34f7fdffdcf7fdff2a1afeffb45dfeff5c5efeffd672fefff272feff0474feffc274feffc674feff661cffff9e37ffffe048ffff1672ffffc0b1fffff2b5ffff64b8ffff2cbaffff42bcffff06f7ffff46f9ffffd8f9ffff5efbffffacb30000e0b300003ab4000040b7000074b70000ceb7000040ba000074ba0000ceba000086c70000b8c700000ad400003cd40000
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -733,8 +733,8 @@ MonoBehaviour:
     y: 567
     width: 1418
     height: 380
-  m_MinSize: {x: 231, y: 271}
-  m_MaxSize: {x: 10001, y: 10021}
+  m_MinSize: {x: 230, y: 250}
+  m_MaxSize: {x: 10000, y: 10000}
   m_ActualView: {fileID: 12}
   m_Panes:
   - {fileID: 12}
@@ -782,22 +782,22 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Prefabs/Items
+    - Assets/Scripts/Rooms
     m_Globs: []
     m_OriginalText: 
   m_ViewMode: 1
   m_StartGridSize: 96
   m_LastFolders:
-  - Assets/Prefabs/Items
+  - Assets/Scripts/Rooms
   m_LastFoldersGridSize: 96
   m_LastProjectPath: C:\Users\User\Epic Shooter
   m_LockTracker:
     m_IsLocked: 1
   m_FolderTreeState:
-    scrollPos: {x: 0, y: 127}
-    m_SelectedIDs: c0780000
-    m_LastClickedID: 30912
-    m_ExpandedIDs: 000000005e78000060780000627800006478000066780000687800006a7800006c7800006e780000707800007e78000000ca9a3b
+    scrollPos: {x: 0, y: 337}
+    m_SelectedIDs: 9a780000
+    m_LastClickedID: 30874
+    m_ExpandedIDs: 000000005e78000060780000627800006478000066780000687800006a7800006c7800006e7800007078000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -850,8 +850,8 @@ MonoBehaviour:
       m_Icon: {fileID: 0}
       m_ResourceFile: 
   m_ListAreaState:
-    m_SelectedInstanceIDs: 
-    m_LastClickedInstanceID: 0
+    m_SelectedInstanceIDs: fa150000
+    m_LastClickedInstanceID: 5626
     m_HadKeyboardFocusLastEvent: 0
     m_ExpandedInstanceIDs: c62300009a7400009074000094500000809a00000000000046c600002af6000004e3000022e200000aed000002d00000c248010022d90000
     m_RenameOverlay:
@@ -1022,7 +1022,7 @@ MonoBehaviour:
     m_CachedPref: 160
     m_ControlHash: -371814159
     m_PrefName: Preview_InspectorPreview
-  m_LastInspectedObjectInstanceID: -1
+  m_LastInspectedObjectInstanceID: 5626
   m_LastVerticalScrollValue: 0
   m_GlobalObjectId: 
   m_LockTracker:
